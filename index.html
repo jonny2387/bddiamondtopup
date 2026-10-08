@@ -97,7 +97,7 @@
       padding: 0 14px;
     }
 
-    /* HEADER */
+    /* HEADER: FIXED NO-TEXT-BREAK ON SMALL SCREENS */
     header {
       background: #ffffff;
       border-bottom: 1px solid var(--border-color);
@@ -110,90 +110,110 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 62px;
+      height: 60px;
+      gap: 8px;
     }
 
     .brand-wrap {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
+      min-width: 0;
+      flex-shrink: 1;
     }
 
     .brand-logo {
-      width: 40px;
-      height: 40px;
-      border-radius: var(--radius-md);
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
       object-fit: cover;
       border: 1px solid var(--border-color);
+      flex-shrink: 0;
     }
 
     .brand-text {
       display: flex;
       flex-direction: column;
+      min-width: 0;
+      overflow: hidden;
     }
 
     .brand-title {
-      font-size: 1.02rem;
+      font-size: clamp(0.85rem, 3.6vw, 1.05rem);
       font-weight: 800;
       color: var(--text-main);
       line-height: 1.15;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .brand-subtitle {
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       font-weight: 700;
       color: var(--primary);
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
     .header-actions {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
+      flex-shrink: 0;
     }
 
     .btn-header-action {
       background: var(--primary-soft);
       color: var(--primary);
-      padding: 7px 14px;
+      padding: 6px 10px;
       border-radius: var(--radius-sm);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 700;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       border: 1px solid rgba(29, 78, 216, 0.15);
       cursor: pointer;
+      white-space: nowrap;
     }
 
+    /* HEADER USER BADGE: NO CROSS BUTTON, CLICKS TO OPEN PROFILE PAGE */
     .user-profile-badge {
       display: flex;
       align-items: center;
       gap: 6px;
-      background: #f1f5f9;
-      padding: 4px 10px 4px 6px;
+      background: #eff6ff;
+      padding: 4px 10px 4px 4px;
       border-radius: 99px;
-      border: 1px solid var(--border-color);
-      font-size: 0.78rem;
+      border: 1px solid rgba(29, 78, 216, 0.2);
+      font-size: 0.76rem;
       font-weight: 700;
+      color: var(--primary);
       cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .user-profile-badge:active {
+      transform: scale(0.96);
     }
 
     .user-avatar-circle {
       width: 28px;
       height: 28px;
       border-radius: 50%;
-      background: var(--primary);
+      background: linear-gradient(135deg, #1d4ed8, #3b82f6);
       color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 0.8rem;
       font-weight: 800;
+      flex-shrink: 0;
     }
 
-    /* BANNER SLIDER: ZERO-ZOOM 1336 / 752 RATIO LOCK & SMOOTH SLIDE */
+    /* BANNER SLIDER: ZERO-ZOOM 1336 / 752 RATIO LOCK */
     .banner-section {
       padding: 12px 0 8px;
     }
@@ -260,7 +280,7 @@
       border-radius: 99px;
     }
 
-    /* TRUST HIGHLIGHT BADGES: DELIVERY 1 MINUTE */
+    /* TRUST HIGHLIGHT BADGES: 1 MINUTE DELIVERY */
     .trust-badges-bar {
       display: flex;
       align-items: center;
@@ -447,7 +467,7 @@
       white-space: nowrap;
     }
 
-    /* CUSTOMER REVIEWS SECTION: 100% LETTER AVATARS ONLY */
+    /* CUSTOMER REVIEWS: 100% LETTER AVATARS */
     .reviews-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -827,9 +847,7 @@
       box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
     }
 
-    /* ================================================= */
-    /* NEW HIGH-END AUTH MODAL DESIGN (FUTURISTIC & SLEEK) */
-    /* ================================================= */
+    /* AUTH MODAL */
     .auth-modal-overlay {
       position: fixed;
       top: 0;
@@ -993,11 +1011,6 @@
       box-shadow: 0 4px 14px rgba(29, 78, 216, 0.35);
       cursor: pointer;
       margin-top: 4px;
-      transition: transform 0.1s ease;
-    }
-
-    .btn-auth-action-primary:active {
-      transform: scale(0.98);
     }
 
     .auth-switch-link {
@@ -1007,6 +1020,121 @@
       text-align: center;
       cursor: pointer;
       margin-top: 4px;
+    }
+
+    /* ======================================================= */
+    /* DEDICATED USER PROFILE SCREEN                          */
+    /* ======================================================= */
+    .profile-card-header {
+      background: linear-gradient(135deg, #1d4ed8, #2563eb);
+      border-radius: var(--radius-lg);
+      padding: 24px 20px;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .profile-avatar-big {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: #ffffff;
+      color: var(--primary);
+      font-size: 1.8rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    }
+
+    .profile-name-text {
+      font-size: 1.2rem;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .profile-email-text {
+      font-size: 0.84rem;
+      color: #bfdbfe;
+    }
+
+    .profile-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .profile-stat-box {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 12px 8px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .profile-stat-num {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .profile-stat-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .profile-menu-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .profile-menu-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border-color);
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .profile-menu-item:last-child {
+      border-bottom: none;
+    }
+
+    .profile-menu-item-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-logout-danger {
+      background: #fee2e2;
+      color: #b91c1c;
+      border: 1px solid #fca5a5;
+      padding: 13px;
+      border-radius: var(--radius-md);
+      font-size: 0.92rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      margin-top: 8px;
     }
 
     /* REALTIME ORDER HISTORY */
@@ -1070,6 +1198,8 @@
   <header>
     <div class="container">
       <div class="header-inner">
+        
+        <!-- Brand -->
         <div class="brand-wrap">
           <img src="https://i.ibb.co.com/C5tCCKKX/FB-IMG-1791441144591.jpg" alt="Logo" class="brand-logo">
           <div class="brand-text">
@@ -1078,8 +1208,9 @@
           </div>
         </div>
 
+        <!-- Header Actions -->
         <div class="header-actions">
-          <!-- Auth Badge / Button -->
+          <!-- Auth / Profile Badge -->
           <div id="header-auth-box">
             <button class="btn-header-action" onclick="openAuthModal('login')">
               <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
@@ -1093,6 +1224,7 @@
             <span>হিস্ট্রি</span>
           </button>
         </div>
+
       </div>
     </div>
   </header>
@@ -1101,15 +1233,13 @@
   <main id="main-content">
     <div class="container">
 
-      <!-- BANNER SLIDER: EXACT 2 BANNERS, LEFT-TO-RIGHT ANIMATION & 1336/752 RATIO -->
+      <!-- BANNER SLIDER: 2 BANNERS, SMOOTH ANIMATION & 1336/752 RATIO -->
       <section class="banner-section">
         <div class="slider-viewport" id="banner-viewport">
           <div class="slider-track" id="slider-track">
-            <!-- Banner 1 -->
             <div class="slide-item">
               <img src="https://i.ibb.co.com/VYsgYPPj/IMG-20261008-133504.png" alt="Free Fire Top Up Banner 1">
             </div>
-            <!-- Banner 2 (Given by user) -->
             <div class="slide-item">
               <img src="https://i.ibb.co.com/d0tq3jm5/IMG-20261008-190726.png" alt="Free Fire Top Up Banner 2">
             </div>
@@ -1150,6 +1280,7 @@
           <div class="section-subtitle">Weekly, Monthly & Special Pass Offers</div>
         </div>
         <div class="product-grid" id="grid-featured">
+          
           <!-- Weekly Membership -->
           <div class="product-card" onclick="openOrderScreen('Weekly Membership', 140, 'https://i.ibb.co.com/GfTbJY4T/free-fire-weekly-membership-bd-1-1.webp')">
             <div class="card-img-wrap">
@@ -1164,8 +1295,8 @@
             </div>
           </div>
 
-          <!-- Monthly Membership (Updated Image) -->
-          <div class="product-card" onclick="openOrderScreen('Monthly Membership', 650, 'https://i.ibb.co.com/7dM3LzRV/free-fire-monthly-membership-bd-1.webp')">
+          <!-- Monthly Membership (NOW 550 BDT) -->
+          <div class="product-card" onclick="openOrderScreen('Monthly Membership', 550, 'https://i.ibb.co.com/7dM3LzRV/free-fire-monthly-membership-bd-1.webp')">
             <div class="card-img-wrap">
               <img src="https://i.ibb.co.com/7dM3LzRV/free-fire-monthly-membership-bd-1.webp" alt="Monthly Membership">
             </div>
@@ -1254,7 +1385,7 @@
         </div>
       </section>
 
-      <!-- CUSTOMER REVIEWS: 100% GOOGLE STYLE LETTER AVATARS (NO PHOTOS) -->
+      <!-- CUSTOMER REVIEWS (NO IMAGES, 100% LETTER AVATARS) -->
       <section class="section-wrap" id="sec-reviews">
         <div class="section-head">
           <h2 class="section-title">গ্রাহকদের রিভিউ ও সাম্প্রতিক ডেলিভারি</h2>
@@ -1262,7 +1393,6 @@
         </div>
         <div class="reviews-grid">
           
-          <!-- Review 1: T -->
           <div class="review-card">
             <div class="review-head">
               <div class="review-user-info">
@@ -1278,7 +1408,6 @@
             <div class="review-text">পেমেন্ট করার মাত্র ৪৫ সেকেন্ডেই ডায়মন্ড অ্যাকাউন্টে পেয়ে গেছি! অস্থির ফাস্ট সার্ভিস।</div>
           </div>
 
-          <!-- Review 2: J -->
           <div class="review-card">
             <div class="review-head">
               <div class="review-user-info">
@@ -1294,7 +1423,6 @@
             <div class="review-text">প্রথমবার অর্ডার দিলাম, কোনো ভেজাল ছাড়াই পেয়ে গেলাম। ভাইদের ব্যবহার ও সার্ভিস চমৎকার।</div>
           </div>
 
-          <!-- Review 3: J -->
           <div class="review-card">
             <div class="review-head">
               <div class="review-user-info">
@@ -1310,7 +1438,6 @@
             <div class="review-text">সরাসরি অফিশিয়াল টপআপ, আইডি ব্যান হওয়ার কোনো রিস্ক নেই। ১০০% ট্রাস্টেড।</div>
           </div>
 
-          <!-- Review 4: M -->
           <div class="review-card">
             <div class="review-head">
               <div class="review-user-info">
@@ -1326,7 +1453,6 @@
             <div class="review-text">বড় অ্যামাউন্ট অর্ডার দিয়ে একটু দ্বিধায় ছিলাম, কিন্তু ১ মিনিটের মধ্যেই টপআপ চলে আসলো!</div>
           </div>
 
-          <!-- Review 5: R -->
           <div class="review-card">
             <div class="review-head">
               <div class="review-user-info">
@@ -1342,7 +1468,6 @@
             <div class="review-text">ইনবক্সে নক দেওয়া লাগেনি, সাইট থেকে অর্ডার করে সাথে সাথে পেয়ে গেলাম। বেস্ট শপ।</div>
           </div>
 
-          <!-- Review 6: S -->
           <div class="review-card">
             <div class="review-head">
               <div class="review-user-info">
@@ -1358,7 +1483,6 @@
             <div class="review-text">দামও অন্যদের চেয়ে কম এবং সার্ভিস সবচেয়ে দ্রুত। সবার নেওয়া উচিত এখান থেকে।</div>
           </div>
 
-          <!-- Review 7: A -->
           <div class="review-card">
             <div class="review-head">
               <div class="review-user-info">
@@ -1374,7 +1498,6 @@
             <div class="review-text">মাত্র ৬০ টাকায় উইকলি লাইট নিলাম, সাথে সাথে মেসেজ চলে আসলো। ধন্যবাদ ভাই।</div>
           </div>
 
-          <!-- Review 8: F -->
           <div class="review-card">
             <div class="review-head">
               <div class="review-user-info">
@@ -1386,11 +1509,10 @@
               </div>
               <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
             </div>
-            <div class="review-package-bar">Monthly Membership — 650 BDT</div>
+            <div class="review-package-bar">Monthly Membership — 550 BDT</div>
             <div class="review-text">নিরাপদ এবং ট্রাস্টেড। টপআপ দেওয়ার পর কোনো সমস্যা হয়নি। অলওয়েজ রিকমেন্ডেড!</div>
           </div>
 
-          <!-- Review 9: K -->
           <div class="review-card">
             <div class="review-head">
               <div class="review-user-info">
@@ -1406,7 +1528,6 @@
             <div class="review-text">অর্ডার দেওয়ার পর হিস্টোরিতেও সাথে সাথে কমপ্লিট দেখিয়েছে। চমৎকার সিস্টেম।</div>
           </div>
 
-          <!-- Review 10: N -->
           <div class="review-card">
             <div class="review-head">
               <div class="review-user-info">
@@ -1420,38 +1541,6 @@
             </div>
             <div class="review-package-bar">14000 Diamonds — 2000 BDT</div>
             <div class="review-text">সবচেয়ে বড় ডিলটা নিলাম। ১ মিনিটের মধ্যে পেয়ে গেছি। অসাধারণ ডেলিভারি স্পিড!</div>
-          </div>
-
-          <!-- Review 11: R -->
-          <div class="review-card">
-            <div class="review-head">
-              <div class="review-user-info">
-                <div class="review-avatar-char" style="background:#0284c7;">R</div>
-                <div>
-                  <div class="review-user-name">রিফাত খান</div>
-                  <div class="review-stars">★★★★★</div>
-                </div>
-              </div>
-              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
-            </div>
-            <div class="review-package-bar">20000 Diamonds — 2500 BDT</div>
-            <div class="review-text">সাপোর্ট খুবই ফ্রেন্ডলি। হোয়াটসঅ্যাপে সাথে সাথে রেসপন্স পেয়েছি।</div>
-          </div>
-
-          <!-- Review 12: M -->
-          <div class="review-card">
-            <div class="review-head">
-              <div class="review-user-info">
-                <div class="review-avatar-char" style="background:#65a30d;">M</div>
-                <div>
-                  <div class="review-user-name">মেহেদী হাসান</div>
-                  <div class="review-stars">★★★★★</div>
-                </div>
-              </div>
-              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
-            </div>
-            <div class="review-package-bar">Weekly Membership — 140 BDT</div>
-            <div class="review-text">কোনো হিডেন চার্জ নেই, যা দাম লেখা তাই। এই সততা সবচেয়ে বেশি পছন্দ হয়েছে।</div>
           </div>
 
         </div>
@@ -1513,26 +1602,24 @@
       <svg class="icon" viewBox="0 0 24 24"><path d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="9"></circle></svg>
       <span>হিস্ট্রি</span>
     </div>
-    <div class="bottom-nav-item" id="btn-nav-support" onclick="navSwitch('support')">
-      <svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-      <span>সাপোর্ট</span>
+    <div class="bottom-nav-item" id="btn-nav-profile" onclick="handleProfileNavClick()">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      <span>প্রোফাইল</span>
     </div>
   </nav>
 
   <!-- ======================================================= -->
-  <!-- HIGH-END MODERN AUTHENTICATION MODAL (GLASS & GRADIENT) -->
+  <!-- HIGH-END MODERN AUTHENTICATION MODAL                    -->
   <!-- ======================================================= -->
   <div class="auth-modal-overlay" id="auth-modal">
     <div class="auth-card-modern">
       
-      <!-- Gradient Banner Header -->
       <div class="auth-card-banner">
         <button class="btn-auth-close" onclick="closeAuthModal()">✕</button>
         <div class="auth-header-title" id="auth-modal-title">স্বাগতম! লগইন করুন</div>
         <div class="auth-header-sub" id="auth-modal-sub">টপ-আপ করতে আপনার অ্যাকাউন্টে প্রবেশ করুন</div>
       </div>
 
-      <!-- Navigation Switcher Pills -->
       <div class="auth-nav-pills">
         <button class="auth-pill-btn active" id="pill-login" onclick="switchAuthMode('login')">লগইন</button>
         <button class="auth-pill-btn" id="pill-signup" onclick="switchAuthMode('signup')">রেজিস্ট্রেশন</button>
@@ -1599,7 +1686,7 @@
 
       <!-- 3. FORGOT PASSWORD FORM -->
       <form id="form-forgot" class="auth-form-body" style="display:none;" onsubmit="handleForgotPassword(event)">
-        <p style="font-size:0.8rem; color:var(--text-muted); line-height:1.4;">আপনার নিবন্ধিত ইমেইল দিন। পাসওয়ার্ড নতুন করে সেট করার অফিশিয়াল ভেরিফিকেশন লিংক ইমেইলে পাঠিয়ে দেওয়া হবে।</p>
+        <p style="font-size:0.8rem; color:var(--text-muted); line-height:1.4;">আপনার নিবন্ধিত ইমেইল দিন। পাসওয়ার্ড নতুন করে সেট করার অফিশিয়াল লিংক পাঠিয়ে দেওয়া হবে।</p>
         
         <div class="form-group">
           <label class="form-label">রেজিস্ট্রেশনকৃত ইমেইল</label>
@@ -1616,7 +1703,79 @@
     </div>
   </div>
 
-  <!-- FULLSCREEN VIEW: ORDER SCREEN (1 MIN DELIVERY) -->
+  <!-- ======================================================= -->
+  <!-- DEDICATED FULLSCREEN USER PROFILE SCREEN               -->
+  <!-- ======================================================= -->
+  <div class="fullscreen-page" id="profile-page">
+    <div class="page-header">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <button class="btn-back" onclick="closeProfilePage()">
+          <svg class="icon" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        </button>
+        <div style="font-weight:700; font-size:1rem;">আমার প্রোফাইল</div>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <!-- Profile Header Card -->
+      <div class="profile-card-header">
+        <div class="profile-avatar-big" id="prof-avatar">U</div>
+        <div class="profile-name-text" id="prof-name">ইউজার</div>
+        <div class="profile-email-text" id="prof-email">user@gmail.com</div>
+      </div>
+
+      <!-- Quick Order Stats -->
+      <div class="profile-stats-grid">
+        <div class="profile-stat-box">
+          <div class="profile-stat-num" id="prof-stat-total">0</div>
+          <div class="profile-stat-label">মোট অর্ডার</div>
+        </div>
+        <div class="profile-stat-box">
+          <div class="profile-stat-num" style="color:#d97706;" id="prof-stat-pending">0</div>
+          <div class="profile-stat-label">পেন্ডিং</div>
+        </div>
+        <div class="profile-stat-box">
+          <div class="profile-stat-num" style="color:#16a34a;" id="prof-stat-done">0</div>
+          <div class="profile-stat-label">সম্পন্ন</div>
+        </div>
+      </div>
+
+      <!-- Profile Menu List -->
+      <div class="profile-menu-card">
+        <div class="profile-menu-item" onclick="closeProfilePage(); openHistoryPage();">
+          <div class="profile-menu-item-left">
+            <svg class="icon" style="color:var(--primary);" viewBox="0 0 24 24"><path d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="9"></circle></svg>
+            <span>আমার অর্ডার হিস্ট্রি</span>
+          </div>
+          <span style="color:#94a3b8;">➔</span>
+        </div>
+
+        <div class="profile-menu-item" onclick="openSupportChat()">
+          <div class="profile-menu-item-left">
+            <svg class="icon" style="color:#16a34a;" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            <span>WhatsApp হেল্পলাইন</span>
+          </div>
+          <span style="color:#94a3b8;">➔</span>
+        </div>
+
+        <div class="profile-menu-item" onclick="openPolicyPage('terms')">
+          <div class="profile-menu-item-left">
+            <svg class="icon" style="color:#64748b;" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <span>শর্তাবলী ও নিয়মাবলী</span>
+          </div>
+          <span style="color:#94a3b8;">➔</span>
+        </div>
+      </div>
+
+      <!-- Logout Button (Cleanly isolated inside profile page) -->
+      <button class="btn-logout-danger" onclick="executeLogout()">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+        <span>অ্যাকাউন্ট থেকে লগআউট করুন</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- FULLSCREEN VIEW: ORDER SCREEN -->
   <div class="fullscreen-page" id="order-page">
     <div class="page-header">
       <div style="display:flex; align-items:center; gap:10px;">
@@ -1762,7 +1921,7 @@
       setTimeout(() => { t.style.display = 'none'; }, 3200);
     }
 
-    // 2. AUTH STATE LISTENER
+    // 2. AUTH STATE LISTENER (NO CROSS BUTTON)
     auth.onAuthStateChanged(user => {
       currentUser = user;
       updateHeaderAuthUI(user);
@@ -1775,11 +1934,11 @@
       const authBox = document.getElementById('header-auth-box');
       if (user) {
         const initial = (user.displayName || user.email || 'U').charAt(0).toUpperCase();
+        // Clean badge, clicking it opens the dedicated profile page!
         authBox.innerHTML = `
-          <div class="user-profile-badge" onclick="confirmLogout()">
+          <div class="user-profile-badge" onclick="openProfilePage()">
             <div class="user-avatar-circle">${initial}</div>
-            <span style="max-width:85px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${user.displayName || 'ইউজার'}</span>
-            <span style="color:#ef4444; font-size:0.75rem; margin-left:2px;" title="লগআউট">✕</span>
+            <span style="max-width:75px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${user.displayName || 'ইউজার'}</span>
           </div>
         `;
       } else {
@@ -1792,15 +1951,58 @@
       }
     }
 
-    function confirmLogout() {
+    // 3. DEDICATED PROFILE PAGE LOGIC
+    function openProfilePage() {
+      if (!currentUser) {
+        openAuthModal('login');
+        return;
+      }
+
+      const initial = (currentUser.displayName || currentUser.email || 'U').charAt(0).toUpperCase();
+      document.getElementById('prof-avatar').innerText = initial;
+      document.getElementById('prof-name').innerText = currentUser.displayName || 'ইউজার';
+      document.getElementById('prof-email').innerText = currentUser.email || '';
+
+      // Calculate order counts for this user
+      const history = JSON.parse(localStorage.getItem('bd009_history')) || [];
+      const total = history.length;
+      const pending = history.filter(o => o.status === 'Pending').length;
+      const done = history.filter(o => o.status === 'Completed').length;
+
+      document.getElementById('prof-stat-total').innerText = total;
+      document.getElementById('prof-stat-pending').innerText = pending;
+      document.getElementById('prof-stat-done').innerText = done;
+
+      document.getElementById('profile-page').classList.add('active');
+    }
+
+    function closeProfilePage() {
+      document.getElementById('profile-page').classList.remove('active');
+    }
+
+    function handleProfileNavClick() {
+      if (currentUser) {
+        openProfilePage();
+      } else {
+        openAuthModal('login');
+      }
+    }
+
+    function executeLogout() {
       if (confirm("আপনি কি অ্যাকাউন্ট থেকে লগআউট করতে চান?")) {
         auth.signOut().then(() => {
+          closeProfilePage();
           showToast("সফলভাবে লগআউট হয়েছে।");
         });
       }
     }
 
-    // 3. AUTH MODAL CONTROLLER
+    function openSupportChat() {
+      const waNum = (appSettings.whatsapp || "01980434250").replace(/[^0-9]/g, '');
+      window.open(`https://wa.me/88${waNum}`, '_blank');
+    }
+
+    // 4. AUTH MODAL CONTROLLER
     function openAuthModal(mode = 'login') {
       switchAuthMode(mode);
       document.getElementById('auth-modal').classList.add('active');
@@ -1919,7 +2121,7 @@
       }
     }
 
-    // 4. BANNER SLIDER: EXACT 2 BANNERS, LEFT-TO-RIGHT & RIGHT-TO-LEFT LOOP
+    // 5. BANNER SLIDER: EXACT 2 BANNERS WITH SMOOTH TRANSITION
     let currentSlide = 0;
     let sliderInterval = null;
     let touchStartX = 0;
@@ -1947,7 +2149,6 @@
 
       if (sliderInterval) clearInterval(sliderInterval);
 
-      // Auto cycle every 6 seconds left-to-right
       if (banners.length > 1) {
         sliderInterval = setInterval(() => {
           currentSlide = (currentSlide + 1) % banners.length;
@@ -1955,7 +2156,6 @@
         }, 6000);
       }
 
-      // Touch Swipe Listeners
       const viewport = document.getElementById('banner-viewport');
       viewport.addEventListener('touchstart', e => {
         touchStartX = e.changedTouches[0].screenX;
@@ -1991,11 +2191,10 @@
       dots.forEach((d, i) => d.classList.toggle('active', i === index));
     }
 
-    // 5. ORDER SCREEN (AUTHENTICATION GUARD)
+    // 6. ORDER SCREEN
     function openOrderScreen(title, price, image) {
       selectedOrder = { title, price, image };
 
-      // Force login before placing order
       if (!currentUser) {
         showToast("অর্ডার করতে অনুগ্রহ করে লগইন করুন!");
         openAuthModal('login');
@@ -2109,7 +2308,7 @@
       localStorage.setItem('bd009_history', JSON.stringify(history));
     }
 
-    // 6. ORDER HISTORY: REALTIME FIRESTORE SYNC
+    // 7. REALTIME FIRESTORE HISTORY
     function syncRealtimeHistory() {
       if (historyListenerUnsubscribe) {
         historyListenerUnsubscribe();
@@ -2185,7 +2384,7 @@
       document.getElementById('history-page').classList.remove('active');
     }
 
-    // 7. POLICIES
+    // 8. POLICIES
     function openPolicyPage(type) {
       const headerTitle = document.getElementById('policy-header-title');
       const body = document.getElementById('policy-body-content');
@@ -2221,7 +2420,7 @@
       document.getElementById('policy-page').classList.remove('active');
     }
 
-    // 8. BOTTOM NAVIGATION
+    // 9. BOTTOM NAVIGATION
     function navSwitch(type) {
       document.querySelectorAll('.bottom-nav-item').forEach(b => b.classList.remove('active'));
 
@@ -2229,25 +2428,23 @@
         document.getElementById('btn-nav-home').classList.add('active');
         closeOrderScreen();
         closeHistoryPage();
+        closeProfilePage();
         closeAuthModal();
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else if (type === 'topup') {
         document.getElementById('btn-nav-topup').classList.add('active');
         closeOrderScreen();
         closeHistoryPage();
+        closeProfilePage();
         closeAuthModal();
         document.getElementById('sec-diamonds').scrollIntoView({ behavior: 'smooth' });
       } else if (type === 'history') {
         document.getElementById('btn-nav-history').classList.add('active');
         openHistoryPage();
-      } else if (type === 'support') {
-        document.getElementById('btn-nav-support').classList.add('active');
-        const waNum = (appSettings.whatsapp || "01980434250").replace(/[^0-9]/g, '');
-        window.open(`https://wa.me/88${waNum}`, '_blank');
       }
     }
 
-    // 9. BACKGROUND FIRESTORE SETTINGS SYNC
+    // 10. BACKGROUND FIRESTORE SETTINGS SYNC
     async function syncFirestoreSettings() {
       try {
         const doc = await db.collection('settings').doc('general').get();

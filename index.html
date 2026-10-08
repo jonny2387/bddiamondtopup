@@ -97,7 +97,7 @@
       padding: 0 14px;
     }
 
-    /* HEADER: FIXED NO-TEXT-BREAK ON SMALL SCREENS */
+    /* HEADER */
     header {
       background: #ffffff;
       border-bottom: 1px solid var(--border-color);
@@ -179,7 +179,6 @@
       white-space: nowrap;
     }
 
-    /* HEADER USER BADGE: NO CROSS BUTTON, CLICKS TO OPEN PROFILE PAGE */
     .user-profile-badge {
       display: flex;
       align-items: center;
@@ -280,7 +279,7 @@
       border-radius: 99px;
     }
 
-    /* TRUST HIGHLIGHT BADGES: 1 MINUTE DELIVERY */
+    /* TRUST HIGHLIGHT BADGES */
     .trust-badges-bar {
       display: flex;
       align-items: center;
@@ -467,98 +466,203 @@
       white-space: nowrap;
     }
 
-    /* CUSTOMER REVIEWS: 100% LETTER AVATARS */
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-    }
-
-    @media (min-width: 640px) {
-      .reviews-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .reviews-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .review-card {
+    /* ======================================================= */
+    /* EXACT REFERENCE: "RECENT ORDERS" LIVE REALTIME FEED     */
+    /* ======================================================= */
+    .recent-orders-card {
       background: #ffffff;
       border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
-      padding: 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+      border-radius: var(--radius-lg);
+      padding: 14px 16px;
       box-shadow: var(--shadow-sm);
+      margin: 14px 0 16px;
     }
 
-    .review-head {
+    .recent-orders-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 4px;
     }
 
-    .review-user-info {
+    .recent-orders-title-wrap {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
-    .review-avatar-char {
+    .recent-bag-icon-box {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-md);
+      background: #fdf2f2;
+      border: 1px solid #fee2e2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #e11d48;
+    }
+
+    .recent-titles {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .recent-main-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.15;
+    }
+
+    .recent-live-status {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #16a34a;
+      margin-top: 2px;
+    }
+
+    .pulse-dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #16a34a;
+      box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7);
+      animation: livePulse 1.8s infinite;
+    }
+
+    @keyframes livePulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(22, 163, 74, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+    }
+
+    .ecg-line {
+      color: #16a34a;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .btn-refresh-recent {
+      background: #f1f5f9;
+      color: #475569;
       width: 34px;
       height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: 1px solid var(--border-color);
+      transition: all 0.25s ease;
+    }
+
+    .btn-refresh-recent:active {
+      transform: rotate(180deg);
+    }
+
+    /* RECENT ORDER LIST ITEMS */
+    .recent-orders-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .recent-order-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #f1f5f9;
+      transition: all 0.3s ease;
+    }
+
+    .recent-order-item:last-child {
+      border-bottom: none;
+    }
+
+    /* Smooth Slide-In Animation for New Live Order */
+    .recent-order-item.new-entry {
+      animation: slideInDown 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes slideInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-16px);
+        background: #f0fdf4;
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+        background: transparent;
+      }
+    }
+
+    .recent-item-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      flex: 1;
+    }
+
+    .recent-user-avatar {
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
       color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       font-weight: 800;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+      flex-shrink: 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
     }
 
-    .review-user-name {
-      font-size: 0.85rem;
+    .recent-item-text {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .recent-user-name {
+      font-size: 0.88rem;
       font-weight: 700;
-      color: var(--text-main);
-      line-height: 1.1;
+      color: #0f172a;
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    .review-badge-done {
+    .recent-user-package {
+      font-size: 0.77rem;
+      color: #64748b;
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .recent-badge-done {
       background: #dcfce7;
       color: #15803d;
-      font-size: 0.68rem;
-      font-weight: 800;
-      padding: 3px 6px;
-      border-radius: 4px;
-      white-space: nowrap;
-    }
-
-    .review-package-bar {
       font-size: 0.75rem;
-      color: var(--primary);
       font-weight: 700;
-      background: var(--primary-soft);
-      padding: 3px 8px;
-      border-radius: 4px;
-      width: fit-content;
-    }
-
-    .review-stars {
-      color: #f59e0b;
-      font-size: 0.78rem;
-      letter-spacing: 1px;
-    }
-
-    .review-text {
-      font-size: 0.8rem;
-      color: #334155;
-      line-height: 1.35;
+      padding: 4px 10px;
+      border-radius: 99px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+      box-shadow: 0 1px 2px rgba(21, 128, 61, 0.1);
     }
 
     /* INSTRUCTION STATEMENT BOX */
@@ -1022,9 +1126,7 @@
       margin-top: 4px;
     }
 
-    /* ======================================================= */
-    /* DEDICATED USER PROFILE SCREEN                          */
-    /* ======================================================= */
+    /* DEDICATED PROFILE SCREEN */
     .profile-card-header {
       background: linear-gradient(135deg, #1d4ed8, #2563eb);
       border-radius: var(--radius-lg);
@@ -1210,7 +1312,6 @@
 
         <!-- Header Actions -->
         <div class="header-actions">
-          <!-- Auth / Profile Badge -->
           <div id="header-auth-box">
             <button class="btn-header-action" onclick="openAuthModal('login')">
               <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
@@ -1218,7 +1319,6 @@
             </button>
           </div>
 
-          <!-- History Button -->
           <button class="btn-header-action" onclick="openHistoryPage()">
             <svg class="icon" viewBox="0 0 24 24"><path d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="9"></circle></svg>
             <span>হিস্ট্রি</span>
@@ -1280,7 +1380,6 @@
           <div class="section-subtitle">Weekly, Monthly & Special Pass Offers</div>
         </div>
         <div class="product-grid" id="grid-featured">
-          
           <!-- Weekly Membership -->
           <div class="product-card" onclick="openOrderScreen('Weekly Membership', 140, 'https://i.ibb.co.com/GfTbJY4T/free-fire-weekly-membership-bd-1-1.webp')">
             <div class="card-img-wrap">
@@ -1295,7 +1394,7 @@
             </div>
           </div>
 
-          <!-- Monthly Membership (NOW 550 BDT) -->
+          <!-- Monthly Membership (550 BDT) -->
           <div class="product-card" onclick="openOrderScreen('Monthly Membership', 550, 'https://i.ibb.co.com/7dM3LzRV/free-fire-monthly-membership-bd-1.webp')">
             <div class="card-img-wrap">
               <img src="https://i.ibb.co.com/7dM3LzRV/free-fire-monthly-membership-bd-1.webp" alt="Monthly Membership">
@@ -1372,7 +1471,7 @@
           </div>
           <div class="product-card" onclick="openOrderScreen('20000 Diamonds', 2500, 'https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg')">
             <div class="card-img-wrap"><img src="https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg" alt="2000 Diamonds"></div>
-            <div class="card-body"><div class="card-title">20000 Diamonds</div><div class="card-foot"><span class="card-price">2500 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
+            <div class="card-body"><div class="card-title">2000 Diamonds</div><div class="card-foot"><span class="card-price">2500 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
           </div>
           <div class="product-card" onclick="openOrderScreen('25000 Diamonds', 3000, 'https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg')">
             <div class="card-img-wrap"><img src="https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg" alt="25000 Diamonds"></div>
@@ -1385,164 +1484,33 @@
         </div>
       </section>
 
-      <!-- CUSTOMER REVIEWS (NO IMAGES, 100% LETTER AVATARS) -->
-      <section class="section-wrap" id="sec-reviews">
-        <div class="section-head">
-          <h2 class="section-title">গ্রাহকদের রিভিউ ও সাম্প্রতিক ডেলিভারি</h2>
-          <div class="section-subtitle">আমাদের সন্তুষ্ট গ্রাহকদের আসল অভিজ্ঞতা ও রেটিং</div>
+      <!-- ======================================================= -->
+      <!-- EXACT REFERENCE DESIGN: RECENT ORDERS (LIVE 15 ITEMS)   -->
+      <!-- ======================================================= -->
+      <section class="recent-orders-card">
+        <!-- Header -->
+        <div class="recent-orders-header">
+          <div class="recent-orders-title-wrap">
+            <div class="recent-bag-icon-box">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            </div>
+            <div class="recent-titles">
+              <div class="recent-main-title">Recent Orders</div>
+              <div class="recent-live-status">
+                <span class="pulse-dot"></span>
+                <span>Live</span>
+                <span class="ecg-line">ﮩ٨ـﮩﮩ٨ـ</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn-refresh-recent" onclick="triggerManualOrderPulse()" title="নতুন অর্ডার রিফ্রেশ">
+            <svg class="icon" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+          </button>
         </div>
-        <div class="reviews-grid">
-          
-          <div class="review-card">
-            <div class="review-head">
-              <div class="review-user-info">
-                <div class="review-avatar-char" style="background:#2563eb;">T</div>
-                <div>
-                  <div class="review-user-name">তানভীর আহমেদ</div>
-                  <div class="review-stars">★★★★★</div>
-                </div>
-              </div>
-              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
-            </div>
-            <div class="review-package-bar">820 Diamonds — 300 BDT</div>
-            <div class="review-text">পেমেন্ট করার মাত্র ৪৫ সেকেন্ডেই ডায়মন্ড অ্যাকাউন্টে পেয়ে গেছি! অস্থির ফাস্ট সার্ভিস।</div>
-          </div>
 
-          <div class="review-card">
-            <div class="review-head">
-              <div class="review-user-info">
-                <div class="review-avatar-char" style="background:#059669;">J</div>
-                <div>
-                  <div class="review-user-name">মোঃ জাহিদুল ইসলাম</div>
-                  <div class="review-stars">★★★★★</div>
-                </div>
-              </div>
-              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
-            </div>
-            <div class="review-package-bar">Weekly Membership — 140 BDT</div>
-            <div class="review-text">প্রথমবার অর্ডার দিলাম, কোনো ভেজাল ছাড়াই পেয়ে গেলাম। ভাইদের ব্যবহার ও সার্ভিস চমৎকার।</div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-head">
-              <div class="review-user-info">
-                <div class="review-avatar-char" style="background:#7c3aed;">J</div>
-                <div>
-                  <div class="review-user-name">জয়ন্ত রায়</div>
-                  <div class="review-stars">★★★★★</div>
-                </div>
-              </div>
-              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
-            </div>
-            <div class="review-package-bar">2000 Diamonds — 500 BDT</div>
-            <div class="review-text">সরাসরি অফিশিয়াল টপআপ, আইডি ব্যান হওয়ার কোনো রিস্ক নেই। ১০০% ট্রাস্টেড।</div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-head">
-              <div class="review-user-info">
-                <div class="review-avatar-char" style="background:#d97706;">M</div>
-                <div>
-                  <div class="review-user-name">মাহিনুর রহমান</div>
-                  <div class="review-stars">★★★★★</div>
-                </div>
-              </div>
-              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
-            </div>
-            <div class="review-package-bar">3500 Diamonds — 700 BDT</div>
-            <div class="review-text">বড় অ্যামাউন্ট অর্ডার দিয়ে একটু দ্বিধায় ছিলাম, কিন্তু ১ মিনিটের মধ্যেই টপআপ চলে আসলো!</div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-head">
-              <div class="review-user-info">
-                <div class="review-avatar-char" style="background:#dc2626;">R</div>
-                <div>
-                  <div class="review-user-name">রাকিব হাসান</div>
-                  <div class="review-stars">★★★★★</div>
-                </div>
-              </div>
-              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
-            </div>
-            <div class="review-package-bar">Level Up Pass — 300 BDT</div>
-            <div class="review-text">ইনবক্সে নক দেওয়া লাগেনি, সাইট থেকে অর্ডার করে সাথে সাথে পেয়ে গেলাম। বেস্ট শপ।</div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-head">
-              <div class="review-user-info">
-                <div class="review-avatar-char" style="background:#0891b2;">S</div>
-                <div>
-                  <div class="review-user-name">সাকিবুল হাসান</div>
-                  <div class="review-stars">★★★★★</div>
-                </div>
-              </div>
-              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
-            </div>
-            <div class="review-package-bar">5500 Diamonds — 1100 BDT</div>
-            <div class="review-text">দামও অন্যদের চেয়ে কম এবং সার্ভিস সবচেয়ে দ্রুত। সবার নেওয়া উচিত এখান থেকে।</div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-head">
-              <div class="review-user-info">
-                <div class="review-avatar-char" style="background:#db2777;">A</div>
-                <div>
-                  <div class="review-user-name">আরিফ চৌধুরী</div>
-                  <div class="review-stars">★★★★★</div>
-                </div>
-              </div>
-              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
-            </div>
-            <div class="review-package-bar">Weekly Lite — 60 BDT</div>
-            <div class="review-text">মাত্র ৬০ টাকায় উইকলি লাইট নিলাম, সাথে সাথে মেসেজ চলে আসলো। ধন্যবাদ ভাই।</div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-head">
-              <div class="review-user-info">
-                <div class="review-avatar-char" style="background:#0d9488;">F</div>
-                <div>
-                  <div class="review-user-name">ফাহিম শাকিল</div>
-                  <div class="review-stars">★★★★★</div>
-                </div>
-              </div>
-              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
-            </div>
-            <div class="review-package-bar">Monthly Membership — 550 BDT</div>
-            <div class="review-text">নিরাপদ এবং ট্রাস্টেড। টপআপ দেওয়ার পর কোনো সমস্যা হয়নি। অলওয়েজ রিকমেন্ডেড!</div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-head">
-              <div class="review-user-info">
-                <div class="review-avatar-char" style="background:#4f46e5;">K</div>
-                <div>
-                  <div class="review-user-name">কায়সার আহমেদ</div>
-                  <div class="review-stars">★★★★★</div>
-                </div>
-              </div>
-              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
-            </div>
-            <div class="review-package-bar">8800 Diamonds — 1500 BDT</div>
-            <div class="review-text">অর্ডার দেওয়ার পর হিস্টোরিতেও সাথে সাথে কমপ্লিট দেখিয়েছে। চমৎকার সিস্টেম।</div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-head">
-              <div class="review-user-info">
-                <div class="review-avatar-char" style="background:#ea580c;">N</div>
-                <div>
-                  <div class="review-user-name">নাঈম ইসলাম</div>
-                  <div class="review-stars">★★★★★</div>
-                </div>
-              </div>
-              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
-            </div>
-            <div class="review-package-bar">14000 Diamonds — 2000 BDT</div>
-            <div class="review-text">সবচেয়ে বড় ডিলটা নিলাম। ১ মিনিটের মধ্যে পেয়ে গেছি। অসাধারণ ডেলিভারি স্পিড!</div>
-          </div>
-
+        <!-- 15 Live Orders Container -->
+        <div class="recent-orders-list" id="recent-orders-container">
+          <!-- Dynamically populated via JS -->
         </div>
       </section>
 
@@ -1613,7 +1581,6 @@
   <!-- ======================================================= -->
   <div class="auth-modal-overlay" id="auth-modal">
     <div class="auth-card-modern">
-      
       <div class="auth-card-banner">
         <button class="btn-auth-close" onclick="closeAuthModal()">✕</button>
         <div class="auth-header-title" id="auth-modal-title">স্বাগতম! লগইন করুন</div>
@@ -1699,7 +1666,6 @@
         <button type="submit" class="btn-auth-action-primary" id="btn-forgot-submit">রিসেট লিংক পাঠান</button>
         <span class="auth-switch-link" onclick="switchAuthMode('login')">লগইন পেজে ফিরে যান</span>
       </form>
-
     </div>
   </div>
 
@@ -1717,14 +1683,12 @@
     </div>
 
     <div class="page-content">
-      <!-- Profile Header Card -->
       <div class="profile-card-header">
         <div class="profile-avatar-big" id="prof-avatar">U</div>
         <div class="profile-name-text" id="prof-name">ইউজার</div>
         <div class="profile-email-text" id="prof-email">user@gmail.com</div>
       </div>
 
-      <!-- Quick Order Stats -->
       <div class="profile-stats-grid">
         <div class="profile-stat-box">
           <div class="profile-stat-num" id="prof-stat-total">0</div>
@@ -1740,7 +1704,6 @@
         </div>
       </div>
 
-      <!-- Profile Menu List -->
       <div class="profile-menu-card">
         <div class="profile-menu-item" onclick="closeProfilePage(); openHistoryPage();">
           <div class="profile-menu-item-left">
@@ -1767,7 +1730,6 @@
         </div>
       </div>
 
-      <!-- Logout Button (Cleanly isolated inside profile page) -->
       <button class="btn-logout-danger" onclick="executeLogout()">
         <svg class="icon" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
         <span>অ্যাকাউন্ট থেকে লগআউট করুন</span>
@@ -1934,7 +1896,6 @@
       const authBox = document.getElementById('header-auth-box');
       if (user) {
         const initial = (user.displayName || user.email || 'U').charAt(0).toUpperCase();
-        // Clean badge, clicking it opens the dedicated profile page!
         authBox.innerHTML = `
           <div class="user-profile-badge" onclick="openProfilePage()">
             <div class="user-avatar-circle">${initial}</div>
@@ -1951,7 +1912,7 @@
       }
     }
 
-    // 3. DEDICATED PROFILE PAGE LOGIC
+    // 3. PROFILE PAGE
     function openProfilePage() {
       if (!currentUser) {
         openAuthModal('login');
@@ -1963,15 +1924,10 @@
       document.getElementById('prof-name').innerText = currentUser.displayName || 'ইউজার';
       document.getElementById('prof-email').innerText = currentUser.email || '';
 
-      // Calculate order counts for this user
       const history = JSON.parse(localStorage.getItem('bd009_history')) || [];
-      const total = history.length;
-      const pending = history.filter(o => o.status === 'Pending').length;
-      const done = history.filter(o => o.status === 'Completed').length;
-
-      document.getElementById('prof-stat-total').innerText = total;
-      document.getElementById('prof-stat-pending').innerText = pending;
-      document.getElementById('prof-stat-done').innerText = done;
+      document.getElementById('prof-stat-total').innerText = history.length;
+      document.getElementById('prof-stat-pending').innerText = history.filter(o => o.status === 'Pending').length;
+      document.getElementById('prof-stat-done').innerText = history.filter(o => o.status === 'Completed').length;
 
       document.getElementById('profile-page').classList.add('active');
     }
@@ -2002,7 +1958,7 @@
       window.open(`https://wa.me/88${waNum}`, '_blank');
     }
 
-    // 4. AUTH MODAL CONTROLLER
+    // 4. AUTH MODAL
     function openAuthModal(mode = 'login') {
       switchAuthMode(mode);
       document.getElementById('auth-modal').classList.add('active');
@@ -2047,7 +2003,6 @@
       }
     }
 
-    // Login Handle
     async function handleUserLogin(e) {
       e.preventDefault();
       const email = document.getElementById('login-email').value.trim();
@@ -2072,7 +2027,6 @@
       }
     }
 
-    // Signup Handle
     async function handleUserSignup(e) {
       e.preventDefault();
       const name = document.getElementById('signup-name').value.trim();
@@ -2100,7 +2054,6 @@
       }
     }
 
-    // Forgot Password Handle
     async function handleForgotPassword(e) {
       e.preventDefault();
       const email = document.getElementById('forgot-email').value.trim();
@@ -2121,7 +2074,7 @@
       }
     }
 
-    // 5. BANNER SLIDER: EXACT 2 BANNERS WITH SMOOTH TRANSITION
+    // 5. BANNER SLIDER: 2 BANNERS, SMOOTH 6-SECOND CYCLE
     let currentSlide = 0;
     let sliderInterval = null;
     let touchStartX = 0;
@@ -2191,7 +2144,126 @@
       dots.forEach((d, i) => d.classList.toggle('active', i === index));
     }
 
-    // 6. ORDER SCREEN
+    // =======================================================
+    // 6. "RECENT ORDERS" LIVE REALTIME GENERATOR (15 ITEMS)
+    // =======================================================
+    const PLAYER_NAMES_POOL = [
+      "Biplob Miya", "Abraham Khan", "Md Arif", "Siyam KING", "Md Jisan", 
+      "Md Juwel Khan", "Tanvir Ahmed", "Rakib Hasan", "Rifat Khan", "Sabbir Hossain", 
+      "Mehedi Hasan", "Joyonto Roy", "Mahinur Rahman", "Sakibul Hasan", "Arif Chowdhury", 
+      "Fahim Shakil", "Kaysar Ahmed", "Nayeem Islam", "Nahid Hasan", "Imran Hossain", 
+      "Shohag Ahmed", "Hridoy Khan", "Alamin Sheikh", "Emon Ali", "Ashikur Rahman", 
+      "Sajib Mia", "Shakil Ahmed", "Munna Khan", "Zubayer Ahmed", "Faisal Mahmud", 
+      "Badhon Roy", "Tamim Iqbal", "Sohanur Rahman", "Kamrul Hasan", "Sujan Mia", 
+      "Shimul Hossain", "Parvez Mosharrof", "Shahadat Hossain", "Rony Talukder", "Jahirul Islam"
+    ];
+
+    const PACKAGES_POOL = [
+      { name: "Weekly Membership", price: 140 },
+      { name: "Monthly Membership", price: 550 },
+      { name: "Weekly Lite", price: 60 },
+      { name: "Level Up Pass", price: 300 },
+      { name: "820 Diamonds", price: 300 },
+      { name: "2000 Diamonds", price: 500 },
+      { name: "3500 Diamonds", price: 700 },
+      { name: "5500 Diamonds", price: 1100 },
+      { name: "8800 Diamonds", price: 1500 },
+      { name: "14000 Diamonds", price: 2000 },
+      { name: "20000 Diamonds", price: 2500 },
+      { name: "25000 Diamonds", price: 3000 },
+      { name: "35000 Diamonds", price: 3900 }
+    ];
+
+    const AVATAR_COLORS = [
+      "#2563eb", "#059669", "#7c3aed", "#d97706", "#dc2626", 
+      "#0891b2", "#db2777", "#0d9488", "#4f46e5", "#ea580c"
+    ];
+
+    let currentRecentOrders = [];
+
+    function generateSingleRecentOrder() {
+      const name = PLAYER_NAMES_POOL[Math.floor(Math.random() * PLAYER_NAMES_POOL.length)];
+      const pkg = PACKAGES_POOL[Math.floor(Math.random() * PACKAGES_POOL.length)];
+      const color = AVATAR_COLORS[Math.floor(Math.random() * AVATAR_COLORS.length)];
+      
+      // Determine avatar letter (e.g. 'Md', 'B', 'A', etc.)
+      let avatarChar = name.charAt(0).toUpperCase();
+      if (name.startsWith("Md ")) {
+        avatarChar = "Md";
+      }
+
+      return {
+        name: name,
+        avatar: avatarChar,
+        color: color,
+        packageText: `${pkg.name} - ৳${pkg.price}`
+      };
+    }
+
+    function initRecentOrdersFeed() {
+      // Generate initial 15 orders
+      currentRecentOrders = [];
+      for (let i = 0; i < 15; i++) {
+        currentRecentOrders.push(generateSingleRecentOrder());
+      }
+      renderRecentOrdersList(false);
+
+      // Automatically inject 2 to 3 new live orders every minute (every 18-24 seconds)
+      scheduleNextLiveOrder();
+    }
+
+    function scheduleNextLiveOrder() {
+      const delay = Math.floor(Math.random() * 8000) + 18000; // 18s to 26s
+      setTimeout(() => {
+        addNewLiveOrder();
+        scheduleNextLiveOrder();
+      }, delay);
+    }
+
+    function addNewLiveOrder() {
+      const newOrder = generateSingleRecentOrder();
+      // Prepend to array
+      currentRecentOrders.unshift(newOrder);
+      // Keep strictly 15 items
+      if (currentRecentOrders.length > 15) {
+        currentRecentOrders.pop();
+      }
+      renderRecentOrdersList(true);
+    }
+
+    function triggerManualOrderPulse() {
+      addNewLiveOrder();
+      showToast("লাইভ অর্ডার তালিকা রিফ্রেশ হয়েছে!");
+    }
+
+    function renderRecentOrdersList(animateFirstItem) {
+      const container = document.getElementById('recent-orders-container');
+      if (!container) return;
+
+      container.innerHTML = '';
+      currentRecentOrders.forEach((item, index) => {
+        const row = document.createElement('div');
+        row.className = `recent-order-item ${index === 0 && animateFirstItem ? 'new-entry' : ''}`;
+        row.innerHTML = `
+          <div class="recent-item-left">
+            <div class="recent-user-avatar" style="background:${item.color};">
+              ${item.avatar}
+            </div>
+            <div class="recent-item-text">
+              <span class="recent-user-name">${item.name}</span>
+              <span class="recent-user-package">${item.packageText}</span>
+            </div>
+          </div>
+          <div class="recent-badge-done">
+            <svg class="icon" style="width:14px; height:14px;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Done</span>
+          </div>
+        `;
+        container.appendChild(row);
+      });
+    }
+
+    // 7. ORDER SCREEN
     function openOrderScreen(title, price, image) {
       selectedOrder = { title, price, image };
 
@@ -2236,7 +2308,6 @@
       }
     }
 
-    // Order Submission: Linked to Authenticated User UID
     async function submitCustomerOrder(e) {
       e.preventDefault();
 
@@ -2308,7 +2379,7 @@
       localStorage.setItem('bd009_history', JSON.stringify(history));
     }
 
-    // 7. REALTIME FIRESTORE HISTORY
+    // 8. REALTIME FIRESTORE HISTORY
     function syncRealtimeHistory() {
       if (historyListenerUnsubscribe) {
         historyListenerUnsubscribe();
@@ -2384,7 +2455,7 @@
       document.getElementById('history-page').classList.remove('active');
     }
 
-    // 8. POLICIES
+    // 9. POLICIES
     function openPolicyPage(type) {
       const headerTitle = document.getElementById('policy-header-title');
       const body = document.getElementById('policy-body-content');
@@ -2420,7 +2491,7 @@
       document.getElementById('policy-page').classList.remove('active');
     }
 
-    // 9. BOTTOM NAVIGATION
+    // 10. BOTTOM NAVIGATION
     function navSwitch(type) {
       document.querySelectorAll('.bottom-nav-item').forEach(b => b.classList.remove('active'));
 
@@ -2444,7 +2515,7 @@
       }
     }
 
-    // 10. BACKGROUND FIRESTORE SETTINGS SYNC
+    // 11. BACKGROUND SETTINGS SYNC
     async function syncFirestoreSettings() {
       try {
         const doc = await db.collection('settings').doc('general').get();
@@ -2465,6 +2536,8 @@
     window.addEventListener('DOMContentLoaded', () => {
       initBannerSlider();
       syncFirestoreSettings();
+      // Initialize Reference "Recent Orders" Live Feed
+      initRecentOrdersFeed();
     });
   </script>
 </body>

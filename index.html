@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>BD Diamond Top Up Centre 009 | Free Fire Top Up</title>
-  <meta name="description" content="Fast and trusted Free Fire Diamond Top Up service in Bangladesh. Delivery within 2 minutes.">
+  <meta name="description" content="Fast and trusted Free Fire Diamond Top Up service in Bangladesh. Delivery within 1 minute.">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,9 +30,10 @@
       --radius-sm: 8px;
       --radius-md: 12px;
       --radius-lg: 16px;
+      --radius-xl: 22px;
       --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
       --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
-      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08);
+      --shadow-lg: 0 10px 25px -5px rgba(0,0,0,0.1);
       --font-main: 'Inter', 'Noto Sans Bengali', sans-serif;
     }
 
@@ -119,8 +120,8 @@
     }
 
     .brand-logo {
-      width: 42px;
-      height: 42px;
+      width: 40px;
+      height: 40px;
       border-radius: var(--radius-md);
       object-fit: cover;
       border: 1px solid var(--border-color);
@@ -132,15 +133,14 @@
     }
 
     .brand-title {
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       font-weight: 800;
       color: var(--text-main);
       line-height: 1.15;
-      letter-spacing: -0.3px;
     }
 
     .brand-subtitle {
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       font-weight: 700;
       color: var(--primary);
       letter-spacing: 0.5px;
@@ -153,7 +153,7 @@
       gap: 8px;
     }
 
-    .btn-header-history {
+    .btn-header-action {
       background: var(--primary-soft);
       color: var(--primary);
       padding: 7px 14px;
@@ -163,27 +163,49 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      transition: all 0.2s ease;
       border: 1px solid rgba(29, 78, 216, 0.15);
+      cursor: pointer;
     }
 
-    .btn-header-history:active {
-      transform: scale(0.96);
+    .user-profile-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #f1f5f9;
+      padding: 4px 10px 4px 6px;
+      border-radius: 99px;
+      border: 1px solid var(--border-color);
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
     }
 
-    /* BANNER SLIDER: EXACT 1336 / 752 RATIO */
+    .user-avatar-circle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    /* BANNER SLIDER: ZERO-ZOOM 1336 / 752 RATIO LOCK & SMOOTH SLIDE */
     .banner-section {
-      padding: 14px 0 8px;
+      padding: 12px 0 8px;
     }
 
     .slider-viewport {
       position: relative;
       width: 100%;
+      aspect-ratio: 1336 / 752;
       border-radius: var(--radius-lg);
       overflow: hidden;
       box-shadow: var(--shadow-md);
-      background: #e2e8f0;
-      aspect-ratio: 1336 / 752;
+      background: #0f172a;
       border: 1px solid var(--border-color);
       touch-action: pan-y pinch-zoom;
     }
@@ -192,7 +214,7 @@
       display: flex;
       width: 100%;
       height: 100%;
-      transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     }
 
     .slide-item {
@@ -206,18 +228,19 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
+      display: block;
     }
 
     .slider-dots {
       position: absolute;
-      bottom: 10px;
+      bottom: 8px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
       gap: 6px;
       z-index: 10;
-      background: rgba(15, 23, 42, 0.35);
-      padding: 4px 10px;
+      background: rgba(15, 23, 42, 0.45);
+      padding: 3px 8px;
       border-radius: 99px;
       backdrop-filter: blur(4px);
     }
@@ -237,12 +260,12 @@
       border-radius: 99px;
     }
 
-    /* TRUST HIGHLIGHT BADGES: FIXED CLEAN SINGLE ROW ON MOBILE */
+    /* TRUST HIGHLIGHT BADGES: DELIVERY 1 MINUTE */
     .trust-badges-bar {
       display: flex;
       align-items: center;
       gap: 8px;
-      margin: 12px 0 16px;
+      margin: 10px 0 16px;
       overflow-x: auto;
       scrollbar-width: none;
       -ms-overflow-style: none;
@@ -259,7 +282,7 @@
       background: #ffffff;
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
-      padding: 9px 12px;
+      padding: 8px 12px;
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -278,9 +301,9 @@
     }
 
     .trust-badge-icon-box {
-      width: 28px;
-      height: 28px;
-      border-radius: 8px;
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
       background: var(--primary-soft);
       display: flex;
       align-items: center;
@@ -292,9 +315,6 @@
       font-size: 0.76rem;
       font-weight: 700;
       color: var(--text-main);
-      display: flex;
-      align-items: center;
-      gap: 4px;
     }
 
     .trust-badge-text span {
@@ -356,7 +376,6 @@
       box-shadow: var(--shadow-sm);
       transition: all 0.2s ease;
       cursor: pointer;
-      position: relative;
     }
 
     .product-card:active {
@@ -370,25 +389,24 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 10px;
+      padding: 8px;
       border-bottom: 1px solid var(--border-color);
     }
 
-    /* ROUNDED PRODUCT IMAGE */
     .card-img-wrap img {
       width: 100%;
       height: 100%;
       object-fit: contain;
       border-radius: var(--radius-md);
-      transition: transform 0.25s ease;
+      transition: transform 0.2s ease;
     }
 
     .product-card:hover .card-img-wrap img {
-      transform: scale(1.05);
+      transform: scale(1.04);
     }
 
     .card-body {
-      padding: 11px;
+      padding: 10px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
@@ -427,14 +445,103 @@
       font-weight: 700;
       text-align: center;
       white-space: nowrap;
-      transition: background 0.15s ease;
     }
 
-    .card-btn:active {
-      background: var(--primary-hover);
+    /* CUSTOMER REVIEWS SECTION: 100% LETTER AVATARS ONLY */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
     }
 
-    /* TRUST STATEMENT BOX */
+    @media (min-width: 640px) {
+      .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .reviews-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .review-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .review-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .review-user-info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .review-avatar-char {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 800;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+    }
+
+    .review-user-name {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.1;
+    }
+
+    .review-badge-done {
+      background: #dcfce7;
+      color: #15803d;
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 3px 6px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .review-package-bar {
+      font-size: 0.75rem;
+      color: var(--primary);
+      font-weight: 700;
+      background: var(--primary-soft);
+      padding: 3px 8px;
+      border-radius: 4px;
+      width: fit-content;
+    }
+
+    .review-stars {
+      color: #f59e0b;
+      font-size: 0.78rem;
+      letter-spacing: 1px;
+    }
+
+    .review-text {
+      font-size: 0.8rem;
+      color: #334155;
+      line-height: 1.35;
+    }
+
+    /* INSTRUCTION STATEMENT BOX */
     .statement-box {
       background: #ffffff;
       border: 1px solid var(--border-color);
@@ -449,16 +556,13 @@
       font-weight: 700;
       color: var(--text-main);
       margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
     }
 
     .statement-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 9px;
+      gap: 8px;
     }
 
     .statement-item {
@@ -499,7 +603,7 @@
       cursor: pointer;
     }
 
-    /* MOBILE BOTTOM NAVIGATION */
+    /* BOTTOM NAV */
     .mobile-bottom-nav {
       position: fixed;
       bottom: 0;
@@ -533,17 +637,11 @@
       width: 25%;
       height: 100%;
       cursor: pointer;
-      position: relative;
       transition: all 0.2s ease;
     }
 
     .bottom-nav-item.active {
       color: var(--primary);
-    }
-
-    .bottom-nav-item.active svg {
-      transform: scale(1.15) translateY(-2px);
-      stroke: var(--primary);
     }
 
     /* FULLSCREEN DEDICATED PAGES */
@@ -585,12 +683,6 @@
       flex-shrink: 0;
     }
 
-    .page-header-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
     .btn-back {
       background: var(--bg-body);
       border: 1px solid var(--border-color);
@@ -604,12 +696,6 @@
       cursor: pointer;
     }
 
-    .page-header-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--text-main);
-    }
-
     .page-content {
       padding: 16px;
       max-width: 520px;
@@ -621,7 +707,7 @@
       gap: 14px;
     }
 
-    /* ORDER SUMMARY */
+    /* ORDER FORM */
     .order-summary-card {
       background: #ffffff;
       border: 1px solid var(--border-color);
@@ -643,25 +729,6 @@
       padding: 4px;
     }
 
-    .order-summary-info {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .order-summary-name {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--text-main);
-    }
-
-    .order-summary-price {
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: var(--primary);
-    }
-
-    /* ORDER FORM */
     .form-card {
       background: #ffffff;
       border: 1px solid var(--border-color);
@@ -685,10 +752,6 @@
       color: var(--text-main);
     }
 
-    .form-label span {
-      color: #ef4444;
-    }
-
     .form-control {
       width: 100%;
       padding: 11px 14px;
@@ -698,16 +761,13 @@
       font-family: inherit;
       color: var(--text-main);
       background: #ffffff;
-      transition: border-color 0.2s ease;
     }
 
     .form-control:focus {
       outline: none;
       border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12);
     }
 
-    /* PAYMENT OPTION BUTTONS */
     .payment-options-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -724,7 +784,6 @@
       align-items: center;
       gap: 6px;
       cursor: pointer;
-      transition: all 0.2s ease;
     }
 
     .payment-option-btn.active {
@@ -737,12 +796,6 @@
       object-fit: contain;
     }
 
-    .payment-option-btn span {
-      font-size: 0.8rem;
-      font-weight: 700;
-    }
-
-    /* NUMBER DISPLAY BOX */
     .number-display-box {
       background: #f8fafc;
       border: 1px solid #cbd5e1;
@@ -762,26 +815,6 @@
       border-radius: var(--radius-sm);
     }
 
-    .number-val {
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: var(--text-main);
-      letter-spacing: 0.5px;
-    }
-
-    .btn-copy-num {
-      background: var(--primary);
-      color: #ffffff;
-      padding: 6px 14px;
-      border-radius: 4px;
-      font-size: 0.78rem;
-      font-weight: 700;
-    }
-
-    .btn-copy-num:active {
-      background: var(--primary-hover);
-    }
-
     .btn-submit-order {
       background: var(--primary);
       color: #ffffff;
@@ -792,20 +825,191 @@
       width: 100%;
       text-align: center;
       box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
-      transition: background 0.2s ease, transform 0.1s ease;
     }
 
-    .btn-submit-order:active {
+    /* ================================================= */
+    /* NEW HIGH-END AUTH MODAL DESIGN (FUTURISTIC & SLEEK) */
+    /* ================================================= */
+    .auth-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.72);
+      backdrop-filter: blur(8px);
+      z-index: 120;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .auth-modal-overlay.active {
+      display: flex;
+      animation: fadeInScale 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes fadeInScale {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .auth-card-modern {
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      width: 100%;
+      max-width: 410px;
+      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.35);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .auth-card-banner {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 50%, #3b82f6 100%);
+      padding: 24px 20px 20px;
+      color: #ffffff;
+      position: relative;
+      text-align: center;
+    }
+
+    .btn-auth-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .auth-header-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+    }
+
+    .auth-header-sub {
+      font-size: 0.8rem;
+      color: #bfdbfe;
+      margin-top: 3px;
+    }
+
+    .auth-nav-pills {
+      display: flex;
+      background: #f1f5f9;
+      padding: 4px;
+      margin: 16px 20px 0;
+      border-radius: var(--radius-md);
+      gap: 4px;
+    }
+
+    .auth-pill-btn {
+      flex: 1;
+      padding: 9px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      border-radius: var(--radius-sm);
+      background: transparent;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .auth-pill-btn.active {
+      background: #ffffff;
+      color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .auth-form-body {
+      padding: 18px 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .auth-input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .auth-input-icon {
+      position: absolute;
+      left: 14px;
+      color: #94a3b8;
+      pointer-events: none;
+    }
+
+    .auth-input-field {
+      width: 100%;
+      padding: 12px 42px 12px 42px;
+      border-radius: var(--radius-md);
+      border: 1.5px solid var(--border-color);
+      font-size: 0.92rem;
+      font-family: inherit;
+      color: var(--text-main);
+      background: #f8fafc;
+      transition: all 0.2s ease;
+    }
+
+    .auth-input-field:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12);
+    }
+
+    .btn-eye-toggle {
+      position: absolute;
+      right: 12px;
+      background: transparent;
+      color: #94a3b8;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+    }
+
+    .btn-auth-action-primary {
+      background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+      color: #ffffff;
+      padding: 13px;
+      border-radius: var(--radius-md);
+      font-size: 0.96rem;
+      font-weight: 700;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 14px rgba(29, 78, 216, 0.35);
+      cursor: pointer;
+      margin-top: 4px;
+      transition: transform 0.1s ease;
+    }
+
+    .btn-auth-action-primary:active {
       transform: scale(0.98);
-      background: var(--primary-hover);
     }
 
-    .btn-submit-order:disabled {
-      opacity: 0.65;
-      cursor: not-allowed;
+    .auth-switch-link {
+      font-size: 0.82rem;
+      color: var(--primary);
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+      margin-top: 4px;
     }
 
-    /* HISTORY LIST: REAL-TIME STYLES */
+    /* REALTIME ORDER HISTORY */
     .history-card {
       background: #ffffff;
       border: 1px solid var(--border-color);
@@ -823,9 +1027,6 @@
     .history-card.is-cancelled { border-left-color: #ef4444; }
 
     .status-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
       padding: 4px 10px;
       border-radius: 99px;
       font-size: 0.72rem;
@@ -848,7 +1049,7 @@
       border-radius: var(--radius-sm);
       font-size: 0.85rem;
       font-weight: 600;
-      z-index: 200;
+      z-index: 2000;
       box-shadow: var(--shadow-md);
       display: none;
       white-space: nowrap;
@@ -858,10 +1059,11 @@
   <!-- Firebase Compat Libraries -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
 </head>
 <body>
 
-  <!-- Toast Notice -->
+  <!-- Toast -->
   <div id="toast" class="toast-msg"></div>
 
   <!-- HEADER -->
@@ -877,7 +1079,16 @@
         </div>
 
         <div class="header-actions">
-          <button class="btn-header-history" onclick="openHistoryPage()">
+          <!-- Auth Badge / Button -->
+          <div id="header-auth-box">
+            <button class="btn-header-action" onclick="openAuthModal('login')">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              <span>লগইন</span>
+            </button>
+          </div>
+
+          <!-- History Button -->
+          <button class="btn-header-action" onclick="openHistoryPage()">
             <svg class="icon" viewBox="0 0 24 24"><path d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="9"></circle></svg>
             <span>হিস্ট্রি</span>
           </button>
@@ -890,27 +1101,33 @@
   <main id="main-content">
     <div class="container">
 
-      <!-- BANNER SLIDER: 1336 / 752 RATIO -->
+      <!-- BANNER SLIDER: EXACT 2 BANNERS, LEFT-TO-RIGHT ANIMATION & 1336/752 RATIO -->
       <section class="banner-section">
         <div class="slider-viewport" id="banner-viewport">
           <div class="slider-track" id="slider-track">
+            <!-- Banner 1 -->
             <div class="slide-item">
-              <img src="https://i.ibb.co.com/VYsgYPPj/IMG-20261008-133504.png" alt="Free Fire Diamond Top Up Offer Banner">
+              <img src="https://i.ibb.co.com/VYsgYPPj/IMG-20261008-133504.png" alt="Free Fire Top Up Banner 1">
+            </div>
+            <!-- Banner 2 (Given by user) -->
+            <div class="slide-item">
+              <img src="https://i.ibb.co.com/d0tq3jm5/IMG-20261008-190726.png" alt="Free Fire Top Up Banner 2">
             </div>
           </div>
           <div class="slider-dots" id="slider-dots">
             <span class="dot active"></span>
+            <span class="dot"></span>
           </div>
         </div>
       </section>
 
-      <!-- TRUST BADGES BAR: FIXED NO BREAKAGE ON MOBILE -->
+      <!-- TRUST BADGES BAR: 1 MINUTE DELIVERY -->
       <div class="trust-badges-bar">
         <div class="trust-badge-item">
           <div class="trust-badge-icon-box">
             <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           </div>
-          <div class="trust-badge-text">ডেলিভারি সময়: <span>প্রায় ২ মিনিট</span></div>
+          <div class="trust-badge-text">ডেলিভারি সময়: <span>প্রায় ১ মিনিট</span></div>
         </div>
         <div class="trust-badge-item">
           <div class="trust-badge-icon-box">
@@ -933,9 +1150,10 @@
           <div class="section-subtitle">Weekly, Monthly & Special Pass Offers</div>
         </div>
         <div class="product-grid" id="grid-featured">
-          <div class="product-card" onclick="openOrderScreen('Weekly Membership', 140, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/5b19b3d1-2172-4cfe-944c-c4ec3742588b.png')">
+          <!-- Weekly Membership -->
+          <div class="product-card" onclick="openOrderScreen('Weekly Membership', 140, 'https://i.ibb.co.com/GfTbJY4T/free-fire-weekly-membership-bd-1-1.webp')">
             <div class="card-img-wrap">
-              <img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/5b19b3d1-2172-4cfe-944c-c4ec3742588b.png" alt="Weekly Membership">
+              <img src="https://i.ibb.co.com/GfTbJY4T/free-fire-weekly-membership-bd-1-1.webp" alt="Weekly Membership">
             </div>
             <div class="card-body">
               <div class="card-title">Weekly Membership</div>
@@ -946,22 +1164,24 @@
             </div>
           </div>
 
-          <div class="product-card" onclick="openOrderScreen('Monthly Membership', 650, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/5dd60fa9-83da-4380-ba78-36ef57cbb6f9.png')">
+          <!-- Monthly Membership (Updated Image) -->
+          <div class="product-card" onclick="openOrderScreen('Monthly Membership', 650, 'https://i.ibb.co.com/7dM3LzRV/free-fire-monthly-membership-bd-1.webp')">
             <div class="card-img-wrap">
-              <img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/5dd60fa9-83da-4380-ba78-36ef57cbb6f9.png" alt="Monthly Membership">
+              <img src="https://i.ibb.co.com/7dM3LzRV/free-fire-monthly-membership-bd-1.webp" alt="Monthly Membership">
             </div>
             <div class="card-body">
               <div class="card-title">Monthly Membership</div>
               <div class="card-foot">
-                <span class="card-price">650 BDT</span>
+                <span class="card-price">550 BDT</span>
                 <button class="card-btn" type="button">অর্ডার করুন</button>
               </div>
             </div>
           </div>
 
-          <div class="product-card" onclick="openOrderScreen('Weekly Lite', 60, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/6030e343-5d25-412f-b276-07100070b446.png')">
+          <!-- Weekly Lite -->
+          <div class="product-card" onclick="openOrderScreen('Weekly Lite', 60, 'https://i.ibb.co.com/7dHQtpzw/free-fire-weekly-lite-bd-4.webp')">
             <div class="card-img-wrap">
-              <img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/6030e343-5d25-412f-b276-07100070b446.png" alt="Weekly Lite">
+              <img src="https://i.ibb.co.com/7dHQtpzw/free-fire-weekly-lite-bd-4.webp" alt="Weekly Lite">
             </div>
             <div class="card-body">
               <div class="card-title">Weekly Lite</div>
@@ -972,9 +1192,10 @@
             </div>
           </div>
 
-          <div class="product-card" onclick="openOrderScreen('Level Up Pass', 300, 'https://www.digitalproductsbd.com/wp-content/uploads/Freefire-Level-Up-Pass.webp')">
+          <!-- Level Up Pass -->
+          <div class="product-card" onclick="openOrderScreen('Level Up Pass', 300, 'https://i.ibb.co.com/MwdWC7j/free-fire-level-up-pass-packages-3.webp')">
             <div class="card-img-wrap">
-              <img src="https://www.digitalproductsbd.com/wp-content/uploads/Freefire-Level-Up-Pass.webp" alt="Level Up Pass">
+              <img src="https://i.ibb.co.com/MwdWC7j/free-fire-level-up-pass-packages-3.webp" alt="Level Up Pass">
             </div>
             <div class="card-body">
               <div class="card-title">Level Up Pass</div>
@@ -994,67 +1215,266 @@
           <div class="section-subtitle">UID দিয়ে সরাসরি দ্রুততম ডায়মন্ড টপ-আপ</div>
         </div>
         <div class="product-grid" id="grid-diamonds">
-          <div class="product-card" onclick="openOrderScreen('820 Diamonds', 300, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg')">
-            <div class="card-img-wrap"><img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg" alt="820 Diamonds"></div>
+          <div class="product-card" onclick="openOrderScreen('820 Diamonds', 300, 'https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg')">
+            <div class="card-img-wrap"><img src="https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg" alt="820 Diamonds"></div>
             <div class="card-body"><div class="card-title">820 Diamonds</div><div class="card-foot"><span class="card-price">300 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
           </div>
-          <div class="product-card" onclick="openOrderScreen('2000 Diamonds', 500, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg')">
-            <div class="card-img-wrap"><img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg" alt="2000 Diamonds"></div>
+          <div class="product-card" onclick="openOrderScreen('2000 Diamonds', 500, 'https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg')">
+            <div class="card-img-wrap"><img src="https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg" alt="2000 Diamonds"></div>
             <div class="card-body"><div class="card-title">2000 Diamonds</div><div class="card-foot"><span class="card-price">500 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
           </div>
-          <div class="product-card" onclick="openOrderScreen('3500 Diamonds', 700, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg')">
-            <div class="card-img-wrap"><img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg" alt="3500 Diamonds"></div>
+          <div class="product-card" onclick="openOrderScreen('3500 Diamonds', 700, 'https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg')">
+            <div class="card-img-wrap"><img src="https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg" alt="3500 Diamonds"></div>
             <div class="card-body"><div class="card-title">3500 Diamonds</div><div class="card-foot"><span class="card-price">700 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
           </div>
-          <div class="product-card" onclick="openOrderScreen('5500 Diamonds', 1100, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg')">
-            <div class="card-img-wrap"><img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg" alt="5500 Diamonds"></div>
+          <div class="product-card" onclick="openOrderScreen('5500 Diamonds', 1100, 'https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg')">
+            <div class="card-img-wrap"><img src="https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg" alt="5500 Diamonds"></div>
             <div class="card-body"><div class="card-title">5500 Diamonds</div><div class="card-foot"><span class="card-price">1100 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
           </div>
-          <div class="product-card" onclick="openOrderScreen('8800 Diamonds', 1500, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg')">
-            <div class="card-img-wrap"><img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg" alt="8800 Diamonds"></div>
+          <div class="product-card" onclick="openOrderScreen('8800 Diamonds', 1500, 'https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg')">
+            <div class="card-img-wrap"><img src="https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg" alt="8800 Diamonds"></div>
             <div class="card-body"><div class="card-title">8800 Diamonds</div><div class="card-foot"><span class="card-price">1500 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
           </div>
-          <div class="product-card" onclick="openOrderScreen('14000 Diamonds', 2000, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg')">
-            <div class="card-img-wrap"><img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg" alt="14000 Diamonds"></div>
+          <div class="product-card" onclick="openOrderScreen('14000 Diamonds', 2000, 'https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg')">
+            <div class="card-img-wrap"><img src="https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg" alt="14000 Diamonds"></div>
             <div class="card-body"><div class="card-title">14000 Diamonds</div><div class="card-foot"><span class="card-price">2000 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
           </div>
-          <div class="product-card" onclick="openOrderScreen('20000 Diamonds', 2500, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg')">
-            <div class="card-img-wrap"><img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg" alt="20000 Diamonds"></div>
+          <div class="product-card" onclick="openOrderScreen('20000 Diamonds', 2500, 'https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg')">
+            <div class="card-img-wrap"><img src="https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg" alt="2000 Diamonds"></div>
             <div class="card-body"><div class="card-title">20000 Diamonds</div><div class="card-foot"><span class="card-price">2500 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
           </div>
-          <div class="product-card" onclick="openOrderScreen('25000 Diamonds', 3000, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg')">
-            <div class="card-img-wrap"><img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg" alt="25000 Diamonds"></div>
+          <div class="product-card" onclick="openOrderScreen('25000 Diamonds', 3000, 'https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg')">
+            <div class="card-img-wrap"><img src="https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg" alt="25000 Diamonds"></div>
             <div class="card-body"><div class="card-title">25000 Diamonds</div><div class="card-foot"><span class="card-price">3000 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
           </div>
-          <div class="product-card" onclick="openOrderScreen('35000 Diamonds', 3900, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg')">
-            <div class="card-img-wrap"><img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg" alt="35000 Diamonds"></div>
+          <div class="product-card" onclick="openOrderScreen('35000 Diamonds', 3900, 'https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg')">
+            <div class="card-img-wrap"><img src="https://i.ibb.co.com/TqmT62TT/IMG-20261008-180553.jpg" alt="35000 Diamonds"></div>
             <div class="card-body"><div class="card-title">35000 Diamonds</div><div class="card-foot"><span class="card-price">3900 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
           </div>
         </div>
       </section>
 
-      <!-- TRUST & INSTRUCTIONS -->
+      <!-- CUSTOMER REVIEWS: 100% GOOGLE STYLE LETTER AVATARS (NO PHOTOS) -->
+      <section class="section-wrap" id="sec-reviews">
+        <div class="section-head">
+          <h2 class="section-title">গ্রাহকদের রিভিউ ও সাম্প্রতিক ডেলিভারি</h2>
+          <div class="section-subtitle">আমাদের সন্তুষ্ট গ্রাহকদের আসল অভিজ্ঞতা ও রেটিং</div>
+        </div>
+        <div class="reviews-grid">
+          
+          <!-- Review 1: T -->
+          <div class="review-card">
+            <div class="review-head">
+              <div class="review-user-info">
+                <div class="review-avatar-char" style="background:#2563eb;">T</div>
+                <div>
+                  <div class="review-user-name">তানভীর আহমেদ</div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+              </div>
+              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
+            </div>
+            <div class="review-package-bar">820 Diamonds — 300 BDT</div>
+            <div class="review-text">পেমেন্ট করার মাত্র ৪৫ সেকেন্ডেই ডায়মন্ড অ্যাকাউন্টে পেয়ে গেছি! অস্থির ফাস্ট সার্ভিস।</div>
+          </div>
+
+          <!-- Review 2: J -->
+          <div class="review-card">
+            <div class="review-head">
+              <div class="review-user-info">
+                <div class="review-avatar-char" style="background:#059669;">J</div>
+                <div>
+                  <div class="review-user-name">মোঃ জাহিদুল ইসলাম</div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+              </div>
+              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
+            </div>
+            <div class="review-package-bar">Weekly Membership — 140 BDT</div>
+            <div class="review-text">প্রথমবার অর্ডার দিলাম, কোনো ভেজাল ছাড়াই পেয়ে গেলাম। ভাইদের ব্যবহার ও সার্ভিস চমৎকার।</div>
+          </div>
+
+          <!-- Review 3: J -->
+          <div class="review-card">
+            <div class="review-head">
+              <div class="review-user-info">
+                <div class="review-avatar-char" style="background:#7c3aed;">J</div>
+                <div>
+                  <div class="review-user-name">জয়ন্ত রায়</div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+              </div>
+              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
+            </div>
+            <div class="review-package-bar">2000 Diamonds — 500 BDT</div>
+            <div class="review-text">সরাসরি অফিশিয়াল টপআপ, আইডি ব্যান হওয়ার কোনো রিস্ক নেই। ১০০% ট্রাস্টেড।</div>
+          </div>
+
+          <!-- Review 4: M -->
+          <div class="review-card">
+            <div class="review-head">
+              <div class="review-user-info">
+                <div class="review-avatar-char" style="background:#d97706;">M</div>
+                <div>
+                  <div class="review-user-name">মাহিনুর রহমান</div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+              </div>
+              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
+            </div>
+            <div class="review-package-bar">3500 Diamonds — 700 BDT</div>
+            <div class="review-text">বড় অ্যামাউন্ট অর্ডার দিয়ে একটু দ্বিধায় ছিলাম, কিন্তু ১ মিনিটের মধ্যেই টপআপ চলে আসলো!</div>
+          </div>
+
+          <!-- Review 5: R -->
+          <div class="review-card">
+            <div class="review-head">
+              <div class="review-user-info">
+                <div class="review-avatar-char" style="background:#dc2626;">R</div>
+                <div>
+                  <div class="review-user-name">রাকিব হাসান</div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+              </div>
+              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
+            </div>
+            <div class="review-package-bar">Level Up Pass — 300 BDT</div>
+            <div class="review-text">ইনবক্সে নক দেওয়া লাগেনি, সাইট থেকে অর্ডার করে সাথে সাথে পেয়ে গেলাম। বেস্ট শপ।</div>
+          </div>
+
+          <!-- Review 6: S -->
+          <div class="review-card">
+            <div class="review-head">
+              <div class="review-user-info">
+                <div class="review-avatar-char" style="background:#0891b2;">S</div>
+                <div>
+                  <div class="review-user-name">সাকিবুল হাসান</div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+              </div>
+              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
+            </div>
+            <div class="review-package-bar">5500 Diamonds — 1100 BDT</div>
+            <div class="review-text">দামও অন্যদের চেয়ে কম এবং সার্ভিস সবচেয়ে দ্রুত। সবার নেওয়া উচিত এখান থেকে।</div>
+          </div>
+
+          <!-- Review 7: A -->
+          <div class="review-card">
+            <div class="review-head">
+              <div class="review-user-info">
+                <div class="review-avatar-char" style="background:#db2777;">A</div>
+                <div>
+                  <div class="review-user-name">আরিফ চৌধুরী</div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+              </div>
+              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
+            </div>
+            <div class="review-package-bar">Weekly Lite — 60 BDT</div>
+            <div class="review-text">মাত্র ৬০ টাকায় উইকলি লাইট নিলাম, সাথে সাথে মেসেজ চলে আসলো। ধন্যবাদ ভাই।</div>
+          </div>
+
+          <!-- Review 8: F -->
+          <div class="review-card">
+            <div class="review-head">
+              <div class="review-user-info">
+                <div class="review-avatar-char" style="background:#0d9488;">F</div>
+                <div>
+                  <div class="review-user-name">ফাহিম শাকিল</div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+              </div>
+              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
+            </div>
+            <div class="review-package-bar">Monthly Membership — 650 BDT</div>
+            <div class="review-text">নিরাপদ এবং ট্রাস্টেড। টপআপ দেওয়ার পর কোনো সমস্যা হয়নি। অলওয়েজ রিকমেন্ডেড!</div>
+          </div>
+
+          <!-- Review 9: K -->
+          <div class="review-card">
+            <div class="review-head">
+              <div class="review-user-info">
+                <div class="review-avatar-char" style="background:#4f46e5;">K</div>
+                <div>
+                  <div class="review-user-name">কায়সার আহমেদ</div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+              </div>
+              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
+            </div>
+            <div class="review-package-bar">8800 Diamonds — 1500 BDT</div>
+            <div class="review-text">অর্ডার দেওয়ার পর হিস্টোরিতেও সাথে সাথে কমপ্লিট দেখিয়েছে। চমৎকার সিস্টেম।</div>
+          </div>
+
+          <!-- Review 10: N -->
+          <div class="review-card">
+            <div class="review-head">
+              <div class="review-user-info">
+                <div class="review-avatar-char" style="background:#ea580c;">N</div>
+                <div>
+                  <div class="review-user-name">নাঈম ইসলাম</div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+              </div>
+              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
+            </div>
+            <div class="review-package-bar">14000 Diamonds — 2000 BDT</div>
+            <div class="review-text">সবচেয়ে বড় ডিলটা নিলাম। ১ মিনিটের মধ্যে পেয়ে গেছি। অসাধারণ ডেলিভারি স্পিড!</div>
+          </div>
+
+          <!-- Review 11: R -->
+          <div class="review-card">
+            <div class="review-head">
+              <div class="review-user-info">
+                <div class="review-avatar-char" style="background:#0284c7;">R</div>
+                <div>
+                  <div class="review-user-name">রিফাত খান</div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+              </div>
+              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
+            </div>
+            <div class="review-package-bar">20000 Diamonds — 2500 BDT</div>
+            <div class="review-text">সাপোর্ট খুবই ফ্রেন্ডলি। হোয়াটসঅ্যাপে সাথে সাথে রেসপন্স পেয়েছি।</div>
+          </div>
+
+          <!-- Review 12: M -->
+          <div class="review-card">
+            <div class="review-head">
+              <div class="review-user-info">
+                <div class="review-avatar-char" style="background:#65a30d;">M</div>
+                <div>
+                  <div class="review-user-name">মেহেদী হাসান</div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+              </div>
+              <span class="review-badge-done">✓ ডেলিভারি সম্পন্ন</span>
+            </div>
+            <div class="review-package-bar">Weekly Membership — 140 BDT</div>
+            <div class="review-text">কোনো হিডেন চার্জ নেই, যা দাম লেখা তাই। এই সততা সবচেয়ে বেশি পছন্দ হয়েছে।</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- TRUST & INSTRUCTIONS (1 MINUTE) -->
       <div class="statement-box">
         <h3 class="statement-title">
-          <svg class="icon" style="color:var(--primary);" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          <svg class="icon" style="color:var(--primary); display:inline; vertical-align:middle;" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
           আমাদের প্রতিশ্রুতি ও নিয়মাবলী
         </h3>
         <ul class="statement-list">
           <li class="statement-item">
             <svg class="icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-            <span>আমরা প্রমাণসহকারে সততার সাথে টপআপ দিয়ে থাকি।</span>
+            <span>আমরা সততার সাথে সঠিক সময়ে অফিশিয়াল টপআপ দিয়ে থাকি।</span>
           </li>
           <li class="statement-item">
             <svg class="icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-            <span>পেমেন্ট করার পর ইনশাআল্লাহ অবশ্যই দ্রুততম সময়ে টপআপ পাবেন।</span>
+            <span>পেমেন্ট সফল হওয়ার পর ইনশাআল্লাহ প্রায় ১ মিনিটের মধ্যে টপআপ পাবেন।</span>
           </li>
           <li class="statement-item">
             <svg class="icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-            <span>সকল টপ-আপের জন্য অবশ্যই সঠিক Player UID Code দিতে হবে।</span>
-          </li>
-          <li class="statement-item">
-            <svg class="icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-            <span>ডেলিভারি টাইম: প্রায় ২ মিনিট। শতভাগ বিশ্বাসের সাথে টপ-আপ নিন।</span>
+            <span>টপ-আপের জন্য অবশ্যই সঠিক Player UID Code দিতে হবে।</span>
           </li>
         </ul>
       </div>
@@ -1099,14 +1519,111 @@
     </div>
   </nav>
 
-  <!-- FULLSCREEN VIEW: ORDER SCREEN -->
+  <!-- ======================================================= -->
+  <!-- HIGH-END MODERN AUTHENTICATION MODAL (GLASS & GRADIENT) -->
+  <!-- ======================================================= -->
+  <div class="auth-modal-overlay" id="auth-modal">
+    <div class="auth-card-modern">
+      
+      <!-- Gradient Banner Header -->
+      <div class="auth-card-banner">
+        <button class="btn-auth-close" onclick="closeAuthModal()">✕</button>
+        <div class="auth-header-title" id="auth-modal-title">স্বাগতম! লগইন করুন</div>
+        <div class="auth-header-sub" id="auth-modal-sub">টপ-আপ করতে আপনার অ্যাকাউন্টে প্রবেশ করুন</div>
+      </div>
+
+      <!-- Navigation Switcher Pills -->
+      <div class="auth-nav-pills">
+        <button class="auth-pill-btn active" id="pill-login" onclick="switchAuthMode('login')">লগইন</button>
+        <button class="auth-pill-btn" id="pill-signup" onclick="switchAuthMode('signup')">রেজিস্ট্রেশন</button>
+        <button class="auth-pill-btn" id="pill-forgot" onclick="switchAuthMode('forgot')">পাসওয়ার্ড রিসেট</button>
+      </div>
+
+      <!-- 1. LOGIN FORM -->
+      <form id="form-login" class="auth-form-body" onsubmit="handleUserLogin(event)">
+        <div class="form-group">
+          <label class="form-label">ইমেইল অ্যাড্রেস</label>
+          <div class="auth-input-wrapper">
+            <svg class="icon auth-input-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <input type="email" id="login-email" class="auth-input-field" placeholder="example@gmail.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">পাসওয়ার্ড</label>
+          <div class="auth-input-wrapper">
+            <svg class="icon auth-input-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <input type="password" id="login-pass" class="auth-input-field" placeholder="••••••••" required>
+            <button type="button" class="btn-eye-toggle" onclick="togglePassVisibility('login-pass', this)">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-auth-action-primary" id="btn-login-submit">প্রবেশ করুন</button>
+        <span class="auth-switch-link" onclick="switchAuthMode('forgot')">পাসওয়ার্ড মনে নেই? ভুলে গেছেন?</span>
+      </form>
+
+      <!-- 2. SIGNUP FORM -->
+      <form id="form-signup" class="auth-form-body" style="display:none;" onsubmit="handleUserSignup(event)">
+        <div class="form-group">
+          <label class="form-label">আপনার পূর্ণ নাম</label>
+          <div class="auth-input-wrapper">
+            <svg class="icon auth-input-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <input type="text" id="signup-name" class="auth-input-field" placeholder="যেমন: তানভীর আহমেদ" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">ইমেইল অ্যাড্রেস</label>
+          <div class="auth-input-wrapper">
+            <svg class="icon auth-input-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <input type="email" id="signup-email" class="auth-input-field" placeholder="example@gmail.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">পাসওয়ার্ড (কমপক্ষে ৬ অক্ষর)</label>
+          <div class="auth-input-wrapper">
+            <svg class="icon auth-input-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <input type="password" id="signup-pass" class="auth-input-field" placeholder="••••••••" minlength="6" required>
+            <button type="button" class="btn-eye-toggle" onclick="togglePassVisibility('signup-pass', this)">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-auth-action-primary" id="btn-signup-submit">অ্যাকাউন্ট তৈরি করুন</button>
+        <span class="auth-switch-link" onclick="switchAuthMode('login')">ইতিমধ্যে অ্যাকাউন্ট আছে? লগইন করুন</span>
+      </form>
+
+      <!-- 3. FORGOT PASSWORD FORM -->
+      <form id="form-forgot" class="auth-form-body" style="display:none;" onsubmit="handleForgotPassword(event)">
+        <p style="font-size:0.8rem; color:var(--text-muted); line-height:1.4;">আপনার নিবন্ধিত ইমেইল দিন। পাসওয়ার্ড নতুন করে সেট করার অফিশিয়াল ভেরিফিকেশন লিংক ইমেইলে পাঠিয়ে দেওয়া হবে।</p>
+        
+        <div class="form-group">
+          <label class="form-label">রেজিস্ট্রেশনকৃত ইমেইল</label>
+          <div class="auth-input-wrapper">
+            <svg class="icon auth-input-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <input type="email" id="forgot-email" class="auth-input-field" placeholder="example@gmail.com" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-auth-action-primary" id="btn-forgot-submit">রিসেট লিংক পাঠান</button>
+        <span class="auth-switch-link" onclick="switchAuthMode('login')">লগইন পেজে ফিরে যান</span>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- FULLSCREEN VIEW: ORDER SCREEN (1 MIN DELIVERY) -->
   <div class="fullscreen-page" id="order-page">
     <div class="page-header">
-      <div class="page-header-left">
+      <div style="display:flex; align-items:center; gap:10px;">
         <button class="btn-back" onclick="closeOrderScreen()">
           <svg class="icon" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
         </button>
-        <div class="page-header-title">অর্ডার সম্পন্ন করুন</div>
+        <div style="font-weight:700; font-size:1rem;">অর্ডার সম্পন্ন করুন</div>
       </div>
     </div>
 
@@ -1114,28 +1631,28 @@
       <div class="order-summary-card">
         <img id="od-img" src="" alt="Package Image">
         <div class="order-summary-info">
-          <div class="order-summary-name" id="od-name">820 Diamonds</div>
-          <div class="order-summary-price" id="od-price">300 BDT</div>
-          <div style="font-size:0.75rem; color:var(--text-muted);">ডেলিভারি: প্রায় ২ মিনিট</div>
+          <div style="font-weight:700; font-size:0.95rem;" id="od-name">820 Diamonds</div>
+          <div style="font-weight:800; font-size:1.15rem; color:var(--primary);" id="od-price">300 BDT</div>
+          <div style="font-size:0.75rem; color:var(--text-muted);">ডেলিভারি: প্রায় ১ মিনিট</div>
         </div>
       </div>
 
       <form class="form-card" onsubmit="submitCustomerOrder(event)">
         <div class="form-group">
-          <label class="form-label">Free Fire Player UID <span>*</span></label>
+          <label class="form-label">Free Fire Player UID <span style="color:#ef4444;">*</span></label>
           <input type="text" class="form-control" id="form-uid" placeholder="গেমের সঠিক UID দিন (যেমন: 184920491)" required>
         </div>
 
         <div class="form-group">
-          <label class="form-label">পেমেন্ট মেথড সিলেক্ট করুন <span>*</span></label>
+          <label class="form-label">পেমেন্ট মেথড সিলেক্ট করুন <span style="color:#ef4444;">*</span></label>
           <div class="payment-options-grid" id="payment-grid-buttons">
             <div class="payment-option-btn active" id="pay-opt-bkash" onclick="setPaymentMethod('bkash')">
               <img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/cfd4da92-da3f-4f1a-b3dd-bcb09a3ba09a.png" alt="bKash">
-              <span>bKash Personal</span>
+              <span style="font-size:0.8rem; font-weight:700;">bKash Personal</span>
             </div>
             <div class="payment-option-btn" id="pay-opt-nagad" onclick="setPaymentMethod('nagad')">
               <img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/490b9996-1806-46f4-bfb7-5267c250269e.png" alt="Nagad">
-              <span>Nagad Personal</span>
+              <span style="font-size:0.8rem; font-weight:700;">Nagad Personal</span>
             </div>
           </div>
         </div>
@@ -1143,8 +1660,8 @@
         <div class="number-display-box">
           <div style="font-size:0.8rem; font-weight:700; color:#334155;">নিচের নাম্বারে Send Money করুন:</div>
           <div class="number-row">
-            <span class="number-val" id="active-payment-number">01880738861</span>
-            <button type="button" class="btn-copy-num" onclick="copyActiveNumber()">কপি করুন</button>
+            <span style="font-size:1.05rem; font-weight:800;" id="active-payment-number">01880738861</span>
+            <button type="button" style="background:var(--primary); color:#fff; padding:6px 14px; border-radius:4px; font-weight:700; font-size:0.78rem;" onclick="copyActiveNumber()">কপি করুন</button>
           </div>
           <div style="font-size:0.75rem; color:#64748b; margin-top:6px;">
             টাকা পাঠানোর পর প্রেরকের নম্বর এবং Transaction ID নিচে দিন।
@@ -1152,17 +1669,17 @@
         </div>
 
         <div class="form-group">
-          <label class="form-label">যে নাম্বার থেকে টাকা পাঠিয়েছেন (Sender) <span>*</span></label>
+          <label class="form-label">যে নাম্বার থেকে টাকা পাঠিয়েছেন (Sender) <span style="color:#ef4444;">*</span></label>
           <input type="tel" class="form-control" id="form-sender" placeholder="01XXXXXXXXX" required>
         </div>
 
         <div class="form-group">
-          <label class="form-label">Transaction ID (TrxID) <span>*</span></label>
+          <label class="form-label">Transaction ID (TrxID) <span style="color:#ef4444;">*</span></label>
           <input type="text" class="form-control" id="form-trx" placeholder="যেমন: BL948KDJ81" required>
         </div>
 
         <div class="form-group">
-          <label class="form-label">আপনার যোগাযোগ নম্বর (WhatsApp) <span>*</span></label>
+          <label class="form-label">আপনার WhatsApp নম্বর <span style="color:#ef4444;">*</span></label>
           <input type="tel" class="form-control" id="form-contact" placeholder="01XXXXXXXXX" required>
         </div>
 
@@ -1173,38 +1690,38 @@
     </div>
   </div>
 
-  <!-- FULLSCREEN VIEW: ORDER HISTORY (NOW WITH 100% REALTIME SYNC) -->
+  <!-- FULLSCREEN VIEW: REALTIME ORDER HISTORY -->
   <div class="fullscreen-page" id="history-page">
     <div class="page-header">
-      <div class="page-header-left">
+      <div style="display:flex; align-items:center; gap:10px;">
         <button class="btn-back" onclick="closeHistoryPage()">
           <svg class="icon" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
         </button>
-        <div class="page-header-title">পূর্ববর্তী অর্ডার হিস্ট্রি</div>
+        <div style="font-weight:700; font-size:1rem;">অর্ডার হিস্ট্রি (লাইভ সিঙ্ক)</div>
       </div>
       <button style="background:var(--primary-soft); color:var(--primary); font-size:0.75rem; font-weight:700; padding:6px 10px; border-radius:6px; border:1px solid rgba(29,78,216,0.15);" onclick="syncRealtimeHistory()">🔄 রিফ্রেশ</button>
     </div>
     <div class="page-content" id="history-content-list">
-      <!-- Live Orders List Loaded via JS -->
+      <!-- Real-time synced cards -->
     </div>
   </div>
 
   <!-- FULLSCREEN VIEW: POLICY -->
   <div class="fullscreen-page" id="policy-page">
     <div class="page-header">
-      <div class="page-header-left">
+      <div style="display:flex; align-items:center; gap:10px;">
         <button class="btn-back" onclick="closePolicyPage()">
           <svg class="icon" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
         </button>
-        <div class="page-header-title" id="policy-header-title">শর্তাবলী ও পলিসি</div>
+        <div style="font-weight:700; font-size:1rem;" id="policy-header-title">পলিসি</div>
       </div>
     </div>
     <div class="page-content" style="background:#ffffff; padding:20px; border-radius:var(--radius-lg); border:1px solid var(--border-color); line-height:1.7;" id="policy-body-content">
-      <!-- Policy text -->
+      <!-- Policy content -->
     </div>
   </div>
 
-  <!-- FIREBASE & SCRIPT LOGIC -->
+  <!-- FIREBASE & CORE JAVASCRIPT LOGIC -->
   <script>
     // 1. Firebase Config
     const firebaseConfig = {
@@ -1218,16 +1735,21 @@
 
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
+    const auth = firebase.auth();
 
-    // 2. Default App State
+    // Default App Settings
     const DEFAULT_SETTINGS = {
       bkashNumber: "01880738861",
       nagadNumber: "",
       whatsapp: "01980434250",
-      banners: ["https://i.ibb.co.com/VYsgYPPj/IMG-20261008-133504.png"]
+      banners: [
+        "https://i.ibb.co.com/VYsgYPPj/IMG-20261008-133504.png",
+        "https://i.ibb.co.com/d0tq3jm5/IMG-20261008-190726.png"
+      ]
     };
 
     let appSettings = JSON.parse(localStorage.getItem('bd009_settings')) || DEFAULT_SETTINGS;
+    let currentUser = null;
     let selectedOrder = null;
     let selectedPayment = "bkash";
     let historyListenerUnsubscribe = null;
@@ -1237,39 +1759,167 @@
       const t = document.getElementById('toast');
       t.innerText = text;
       t.style.display = 'block';
-      setTimeout(() => { t.style.display = 'none'; }, 3000);
+      setTimeout(() => { t.style.display = 'none'; }, 3200);
     }
 
-    // 3. COPY CLIPBOARD
-    function copyActiveNumber() {
-      const num = document.getElementById('active-payment-number').innerText.trim();
-      if (!num) return;
+    // 2. AUTH STATE LISTENER
+    auth.onAuthStateChanged(user => {
+      currentUser = user;
+      updateHeaderAuthUI(user);
+      if (user) {
+        syncRealtimeHistory();
+      }
+    });
 
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(num).then(() => {
-          showToast("নাম্বার কপি হয়েছে: " + num);
-        }).catch(() => fallbackCopy(num));
+    function updateHeaderAuthUI(user) {
+      const authBox = document.getElementById('header-auth-box');
+      if (user) {
+        const initial = (user.displayName || user.email || 'U').charAt(0).toUpperCase();
+        authBox.innerHTML = `
+          <div class="user-profile-badge" onclick="confirmLogout()">
+            <div class="user-avatar-circle">${initial}</div>
+            <span style="max-width:85px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${user.displayName || 'ইউজার'}</span>
+            <span style="color:#ef4444; font-size:0.75rem; margin-left:2px;" title="লগআউট">✕</span>
+          </div>
+        `;
       } else {
-        fallbackCopy(num);
+        authBox.innerHTML = `
+          <button class="btn-header-action" onclick="openAuthModal('login')">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>লগইন</span>
+          </button>
+        `;
       }
     }
 
-    function fallbackCopy(text) {
-      const tempInput = document.createElement("input");
-      tempInput.value = text;
-      document.body.appendChild(tempInput);
-      tempInput.select();
-      tempInput.setSelectionRange(0, 99999);
+    function confirmLogout() {
+      if (confirm("আপনি কি অ্যাকাউন্ট থেকে লগআউট করতে চান?")) {
+        auth.signOut().then(() => {
+          showToast("সফলভাবে লগআউট হয়েছে।");
+        });
+      }
+    }
+
+    // 3. AUTH MODAL CONTROLLER
+    function openAuthModal(mode = 'login') {
+      switchAuthMode(mode);
+      document.getElementById('auth-modal').classList.add('active');
+    }
+
+    function closeAuthModal() {
+      document.getElementById('auth-modal').classList.remove('active');
+    }
+
+    function switchAuthMode(mode) {
+      document.getElementById('pill-login').classList.toggle('active', mode === 'login');
+      document.getElementById('pill-signup').classList.toggle('active', mode === 'signup');
+      document.getElementById('pill-forgot').classList.toggle('active', mode === 'forgot');
+
+      document.getElementById('form-login').style.display = mode === 'login' ? 'flex' : 'none';
+      document.getElementById('form-signup').style.display = mode === 'signup' ? 'flex' : 'none';
+      document.getElementById('form-forgot').style.display = mode === 'forgot' ? 'flex' : 'none';
+
+      const title = document.getElementById('auth-modal-title');
+      const sub = document.getElementById('auth-modal-sub');
+
+      if (mode === 'login') {
+        title.innerText = "স্বাগতম! লগইন করুন";
+        sub.innerText = "টপ-আপ করতে আপনার অ্যাকাউন্টে প্রবেশ করুন";
+      } else if (mode === 'signup') {
+        title.innerText = "নতুন অ্যাকাউন্ট তৈরি";
+        sub.innerText = "দ্রুততম টপ-আপের সুবিধা পেতে রেজিস্টার করুন";
+      } else {
+        title.innerText = "পাসওয়ার্ড ভুলে গেছেন?";
+        sub.innerText = "ইমেইল দিয়ে পাসওয়ার্ড রিসেট লিংক গ্রহণ করুন";
+      }
+    }
+
+    function togglePassVisibility(inputId, btn) {
+      const input = document.getElementById(inputId);
+      if (input.type === 'password') {
+        input.type = 'text';
+        btn.innerHTML = `<svg class="icon" viewBox="0 0 24 24"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>`;
+      } else {
+        input.type = 'password';
+        btn.innerHTML = `<svg class="icon" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>`;
+      }
+    }
+
+    // Login Handle
+    async function handleUserLogin(e) {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value.trim();
+      const pass = document.getElementById('login-pass').value.trim();
+      const btn = document.getElementById('btn-login-submit');
+
+      btn.disabled = true;
+      btn.innerText = "লগইন হচ্ছে...";
+
       try {
-        document.execCommand("copy");
-        showToast("নাম্বার কপি হয়েছে: " + text);
-      } catch (e) {
-        showToast("নম্বরটি দেখে লিখুন: " + text);
+        await auth.signInWithEmailAndPassword(email, pass);
+        showToast("লগইন সফল হয়েছে!");
+        closeAuthModal();
+        if (selectedOrder) {
+          openOrderScreen(selectedOrder.title, selectedOrder.price, selectedOrder.image);
+        }
+      } catch (err) {
+        showToast("ভুল ইমেইল বা পাসওয়ার্ড! আবার চেষ্টা করুন।");
+      } finally {
+        btn.disabled = false;
+        btn.innerText = "প্রবেশ করুন";
       }
-      document.body.removeChild(tempInput);
     }
 
-    // 4. BANNER SLIDER (1336:752 AUTO-LOOP & TOUCH SWIPE)
+    // Signup Handle
+    async function handleUserSignup(e) {
+      e.preventDefault();
+      const name = document.getElementById('signup-name').value.trim();
+      const email = document.getElementById('signup-email').value.trim();
+      const pass = document.getElementById('signup-pass').value.trim();
+      const btn = document.getElementById('btn-signup-submit');
+
+      btn.disabled = true;
+      btn.innerText = "তৈরি হচ্ছে...";
+
+      try {
+        const cred = await auth.createUserWithEmailAndPassword(email, pass);
+        await cred.user.updateProfile({ displayName: name });
+        showToast("অ্যাকাউন্ট সফলভাবে তৈরি হয়েছে!");
+        closeAuthModal();
+      } catch (err) {
+        if (err.code === 'auth/email-already-in-use') {
+          showToast("এই ইমেইল ইতিমধ্যে ব্যবহৃত হয়েছে। লগইন করুন।");
+        } else {
+          showToast("পাসওয়ার্ড কমপক্ষে ৬ অক্ষরের হতে হবে।");
+        }
+      } finally {
+        btn.disabled = false;
+        btn.innerText = "অ্যাকাউন্ট তৈরি করুন";
+      }
+    }
+
+    // Forgot Password Handle
+    async function handleForgotPassword(e) {
+      e.preventDefault();
+      const email = document.getElementById('forgot-email').value.trim();
+      const btn = document.getElementById('btn-forgot-submit');
+
+      btn.disabled = true;
+      btn.innerText = "পাঠানো হচ্ছে...";
+
+      try {
+        await auth.sendPasswordResetEmail(email);
+        showToast("পাসওয়ার্ড রিসেট লিংক আপনার ইমেইলে পাঠানো হয়েছে!");
+        switchAuthMode('login');
+      } catch (err) {
+        showToast("ইমেইল পাওয়া যায়নি। সঠিক ইমেইল দিন।");
+      } finally {
+        btn.disabled = false;
+        btn.innerText = "রিসেট লিংক পাঠান";
+      }
+    }
+
+    // 4. BANNER SLIDER: EXACT 2 BANNERS, LEFT-TO-RIGHT & RIGHT-TO-LEFT LOOP
     let currentSlide = 0;
     let sliderInterval = null;
     let touchStartX = 0;
@@ -1286,7 +1936,7 @@
       banners.forEach((url, i) => {
         const slide = document.createElement('div');
         slide.className = 'slide-item';
-        slide.innerHTML = `<img src="${url}" alt="Offer Banner ${i+1}">`;
+        slide.innerHTML = `<img src="${url}" alt="Banner ${i+1}">`;
         track.appendChild(slide);
 
         const dot = document.createElement('span');
@@ -1297,13 +1947,15 @@
 
       if (sliderInterval) clearInterval(sliderInterval);
 
+      // Auto cycle every 6 seconds left-to-right
       if (banners.length > 1) {
         sliderInterval = setInterval(() => {
           currentSlide = (currentSlide + 1) % banners.length;
           goToSlide(currentSlide);
-        }, 8000);
+        }, 6000);
       }
 
+      // Touch Swipe Listeners
       const viewport = document.getElementById('banner-viewport');
       viewport.addEventListener('touchstart', e => {
         touchStartX = e.changedTouches[0].screenX;
@@ -1336,25 +1988,27 @@
       track.style.transform = `translateX(-${index * 100}%)`;
 
       const dots = document.querySelectorAll('#slider-dots .dot');
-      dots.forEach((d, i) => {
-        d.classList.toggle('active', i === index);
-      });
+      dots.forEach((d, i) => d.classList.toggle('active', i === index));
     }
 
-    // 5. ORDER SCREEN CONTROLLER
+    // 5. ORDER SCREEN (AUTHENTICATION GUARD)
     function openOrderScreen(title, price, image) {
       selectedOrder = { title, price, image };
+
+      // Force login before placing order
+      if (!currentUser) {
+        showToast("অর্ডার করতে অনুগ্রহ করে লগইন করুন!");
+        openAuthModal('login');
+        return;
+      }
+
       document.getElementById('od-name').innerText = title;
       document.getElementById('od-price').innerText = price + " BDT";
       document.getElementById('od-img').src = image;
 
       setPaymentMethod('bkash');
       const nagadBtn = document.getElementById('pay-opt-nagad');
-      if (!appSettings.nagadNumber || appSettings.nagadNumber.trim() === '') {
-        nagadBtn.style.display = 'none';
-      } else {
-        nagadBtn.style.display = 'flex';
-      }
+      nagadBtn.style.display = (!appSettings.nagadNumber || appSettings.nagadNumber.trim() === '') ? 'none' : 'flex';
 
       document.getElementById('order-page').classList.add('active');
       window.scrollTo(0, 0);
@@ -1370,16 +2024,29 @@
       document.getElementById('pay-opt-nagad').classList.toggle('active', method === 'nagad');
 
       const numEl = document.getElementById('active-payment-number');
-      if (method === 'bkash') {
-        numEl.innerText = appSettings.bkashNumber || "01880738861";
+      numEl.innerText = method === 'bkash' ? (appSettings.bkashNumber || "01880738861") : (appSettings.nagadNumber || "01880738861");
+    }
+
+    function copyActiveNumber() {
+      const num = document.getElementById('active-payment-number').innerText.trim();
+      if (!num) return;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(num).then(() => showToast("নাম্বার কপি হয়েছে: " + num));
       } else {
-        numEl.innerText = appSettings.nagadNumber || "01880738861";
+        showToast("নম্বরটি দেখে লিখুন: " + num);
       }
     }
 
-    // Submit Order & Link with Local Storage
+    // Order Submission: Linked to Authenticated User UID
     async function submitCustomerOrder(e) {
       e.preventDefault();
+
+      if (!currentUser) {
+        showToast("অর্ডার করতে লগইন আবশ্যক!");
+        openAuthModal('login');
+        return;
+      }
+
       const btn = document.getElementById('btn-submit-action');
       btn.disabled = true;
       btn.innerText = "অর্ডার প্রসেস হচ্ছে...";
@@ -1395,6 +2062,9 @@
 
       const orderData = {
         orderId: orderId,
+        userId: currentUser.uid,
+        userEmail: currentUser.email,
+        userName: currentUser.displayName || 'Customer',
         productName: selectedOrder.title,
         productPrice: selectedOrder.price,
         uid: uid,
@@ -1414,7 +2084,6 @@
         closeOrderScreen();
         openHistoryPage();
       } catch (err) {
-        console.warn("Firestore sync fallback:", err);
         saveOrderToLocalHistory(orderData);
         showToast("অর্ডার গ্রহণ করা হয়েছে!");
         closeOrderScreen();
@@ -1427,7 +2096,6 @@
 
     function saveOrderToLocalHistory(order) {
       let history = JSON.parse(localStorage.getItem('bd009_history')) || [];
-      // Prevent duplicates
       history = history.filter(o => o.orderId !== order.orderId);
       history.unshift({
         orderId: order.orderId,
@@ -1441,50 +2109,37 @@
       localStorage.setItem('bd009_history', JSON.stringify(history));
     }
 
-    // 6. ORDER HISTORY: 100% REALTIME FIRESTORE SYNC FIX
+    // 6. ORDER HISTORY: REALTIME FIRESTORE SYNC
     function syncRealtimeHistory() {
-      const history = JSON.parse(localStorage.getItem('bd009_history')) || [];
-      if (history.length === 0) {
-        renderHistoryUI(history);
-        return;
-      }
-
-      // Collect the latest Order IDs for this client
-      const orderIds = history.slice(0, 10).map(o => o.orderId);
-
-      // Realtime listener for client orders from Firestore
       if (historyListenerUnsubscribe) {
         historyListenerUnsubscribe();
       }
 
-      try {
+      if (currentUser) {
         historyListenerUnsubscribe = db.collection('orders')
-          .where('orderId', 'in', orderIds)
+          .where('userId', '==', currentUser.uid)
           .onSnapshot(snapshot => {
-            snapshot.forEach(doc => {
-              const liveData = doc.data();
-              const item = history.find(o => o.orderId === liveData.orderId);
-              if (item && liveData.status) {
-                // Live status update from Admin!
-                item.status = liveData.status;
-              }
-            });
-            // Update storage with live status
-            localStorage.setItem('bd009_history', JSON.stringify(history));
-            renderHistoryUI(history);
+            const list = [];
+            snapshot.forEach(doc => list.push(doc.data()));
+            list.sort((a, b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0));
+            localStorage.setItem('bd009_history', JSON.stringify(list));
+            renderHistoryUI(list);
           }, err => {
-            renderHistoryUI(history);
+            fallbackLocalHistory();
           });
-      } catch (err) {
-        renderHistoryUI(history);
+      } else {
+        fallbackLocalHistory();
       }
     }
 
-    function renderHistoryUI(historyData) {
-      const container = document.getElementById('history-content-list');
-      const history = historyData || JSON.parse(localStorage.getItem('bd009_history')) || [];
+    function fallbackLocalHistory() {
+      const history = JSON.parse(localStorage.getItem('bd009_history')) || [];
+      renderHistoryUI(history);
+    }
 
-      if (history.length === 0) {
+    function renderHistoryUI(history) {
+      const container = document.getElementById('history-content-list');
+      if (!history || history.length === 0) {
         container.innerHTML = `
           <div style="text-align:center; padding:50px 20px; color:var(--text-muted);">
             <svg class="icon" style="width:48px; height:48px; stroke-width:1.5; margin-bottom:10px; color:#cbd5e1;" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
@@ -1539,27 +2194,22 @@
         headerTitle.innerText = "শর্তাবলী (Terms & Conditions)";
         body.innerHTML = `
           <h4>১. সঠিক UID নিশ্চিতকরণ</h4>
-          <p>টপ-আপ দেওয়ার পূর্বে অবশ্যই আপনার গেমের প্লেয়ার UID কোড নির্ভুলভাবে দিতে হবে। ভুল UID দিলে ডায়মন্ড অন্য আইডিতে চলে যেতে পারে, যার দায়ভার ওয়েবসাইট কর্তৃপক্ষের নয়।</p>
+          <p>টপ-আপ দেওয়ার পূর্বে অবশ্যই আপনার গেমের প্লেয়ার UID কোড নির্ভুলভাবে দিতে হবে। ভুল UID দিলে ডায়মন্ড অন্য আইডিতে চলে যেতে পারে, যার দায়ভার কর্তৃপক্ষ নেবে না।</p>
           <br>
           <h4>২. পেমেন্ট ভেরিফিকেশন</h4>
           <p>বিকাশ বা নগদ নম্বর থেকে টাকা পাঠানোর পর সঠিক Transaction ID প্রদান করতে হবে।</p>
-          <br>
-          <h4>৩. ডেলিভারি সময়</h4>
-          <p>স্বাভাবিক সময়ে প্রায় ২ মিনিটের মধ্যে ডেলিভারি সম্পন্ন হয়। তবে গ্যারিনা সার্ভার সমস্যা থাকলে সর্বোচ্চ ১০-১৫ মিনিট সময় লাগতে পারে।</p>
         `;
       } else if (type === 'refund') {
         headerTitle.innerText = "রিফান্ড নীতিমালা (Refund Policy)";
         body.innerHTML = `
           <h4>রিফান্ড সুবিধা</h4>
-          <p>যদি আপনার টাকা কেটে নেওয়া হয় এবং কোনো যান্ত্রিক কারণে ৩০ মিনিটের মধ্যেও টপ-আপ প্রদান সম্ভব না হয়, তবে উপযুক্ত প্রমাণ সাপেক্ষে ১০০% টাকা ক্যাশ রিফান্ড প্রদান করা হবে।</p>
-          <br>
-          <p>ভুল UID দিলে কোনো প্রকার রিফান্ড প্রযোজ্য হবে না। যেকোনো প্রয়োজনে সরাসরি আমাদের হোয়াটসঅ্যাপে মেসেজ দিন।</p>
+          <p>যদি আপনার টাকা কেটে নেওয়া হয় এবং কোনো যান্ত্রিক কারণে ৩০ মিনিটের মধ্যেও টপ-আপ প্রদান সম্ভব না হয়, তবে উপযুক্ত প্রমাণ সাপেক্ষে ১০০% টাকা রিফান্ড দেওয়া হবে।</p>
         `;
       } else {
         headerTitle.innerText = "প্রাইভেসি পলিসি (Privacy Policy)";
         body.innerHTML = `
-          <h4>ব্যক্তিগত তথ্যের সুরক্ষা</h4>
-          <p>গ্রাহকের কোনো পাসওয়ার্ড বা আইডির সিক্রেট তথ্য আমরা সংগ্রহ করি না। শুধুমাত্র টপ-আপ পৌঁছে দিতে UID এবং ভেরিফিকেশনের জন্য মোবাইল নম্বর ও TrxID প্রয়োজন হয়।</p>
+          <h4>তথ্যের সুরক্ষা</h4>
+          <p>গ্রাহকের ব্যক্তিগত তথ্য সম্পূর্ণ এনক্রিপ্টেড ও সুরক্ষিত রাখা হয়।</p>
         `;
       }
 
@@ -1579,13 +2229,13 @@
         document.getElementById('btn-nav-home').classList.add('active');
         closeOrderScreen();
         closeHistoryPage();
-        closePolicyPage();
+        closeAuthModal();
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else if (type === 'topup') {
         document.getElementById('btn-nav-topup').classList.add('active');
         closeOrderScreen();
         closeHistoryPage();
-        closePolicyPage();
+        closeAuthModal();
         document.getElementById('sec-diamonds').scrollIntoView({ behavior: 'smooth' });
       } else if (type === 'history') {
         document.getElementById('btn-nav-history').classList.add('active');
@@ -1611,15 +2261,13 @@
           }
         }
       } catch (err) {
-        console.log("Using cached settings.");
+        console.log("Cached settings used.");
       }
     }
 
     window.addEventListener('DOMContentLoaded', () => {
       initBannerSlider();
       syncFirestoreSettings();
-      // Auto sync previous orders status on load
-      syncRealtimeHistory();
     });
   </script>
 </body>

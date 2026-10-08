@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>BD Diamond Top Up Centre 009 | Free Fire Top Up</title>
+  <meta name="description" content="Fast and trusted Free Fire Diamond Top Up service in Bangladesh. Delivery within 2 minutes.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --primary: #1d4ed8;
+      --primary-hover: #1e40af;
+      --primary-soft: #eff6ff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --status-success: #15803d;
+      --status-success-bg: #dcfce7;
+      --status-pending: #b45309;
+      --status-pending-bg: #fef3c7;
+      --status-cancelled: #b91c1c;
+      --status-cancelled-bg: #fee2e2;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08);
+      --font-main: 'Inter', 'Noto Sans Bengali', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: var(--font-main);
+      line-height: 1.45;
+      padding-bottom: 76px;
+      overflow-x: hidden;
+    }
+
+    @media (min-width: 1024px) {
+      body {
+        padding-bottom: 0;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+
+    .icon {
+      width: 18px;
+      height: 18px;
+      stroke-width: 2.2;
+      stroke: currentColor;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 14px;
+    }
+
+    /* HEADER */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 62px;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-md);
+      object-fit: cover;
+      border: 1px solid var(--border-color);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.15;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-subtitle {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-header-history {
+      background: var(--primary-soft);
+      color: var(--primary);
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      border: 1px solid rgba(29, 78, 216, 0.15);
+    }
+
+    .btn-header-history:active {
+      transform: scale(0.96);
+    }
+
+    /* BANNER SLIDER: EXACT 1336 / 752 RATIO */
+    .banner-section {
+      padding: 14px 0 8px;
+    }
+
+    .slider-viewport {
+      position: relative;
+      width: 100%;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      background: #e2e8f0;
+      aspect-ratio: 1336 / 752;
+      border: 1px solid var(--border-color);
+      touch-action: pan-y pinch-zoom;
+    }
+
+    .slider-track {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .slide-item {
+      min-width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .slide-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .slider-dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+      z-index: 10;
+      background: rgba(15, 23, 42, 0.35);
+      padding: 4px 10px;
+      border-radius: 99px;
+      backdrop-filter: blur(4px);
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      background: rgba(255, 255, 255, 0.55);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: #ffffff;
+      width: 18px;
+      border-radius: 99px;
+    }
+
+    /* TRUST HIGHLIGHT BADGES: FIXED CLEAN SINGLE ROW ON MOBILE */
+    .trust-badges-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 12px 0 16px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 2px;
+    }
+
+    .trust-badges-bar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .trust-badge-item {
+      flex: 1 0 auto;
+      min-width: fit-content;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 9px 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: var(--shadow-sm);
+      white-space: nowrap;
+    }
+
+    @media (min-width: 768px) {
+      .trust-badges-bar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .trust-badge-item {
+        justify-content: center;
+      }
+    }
+
+    .trust-badge-icon-box {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--primary-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+    }
+
+    .trust-badge-text {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .trust-badge-text span {
+      color: var(--primary);
+    }
+
+    /* SECTIONS */
+    .section-wrap {
+      padding: 10px 0 16px;
+    }
+
+    .section-head {
+      margin-bottom: 12px;
+      border-left: 3.5px solid var(--primary);
+      padding-left: 10px;
+    }
+
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.2;
+    }
+
+    .section-subtitle {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* PRODUCT GRID */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    @media (min-width: 640px) {
+      .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
+    }
+
+    .product-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .product-card:active {
+      transform: scale(0.98);
+    }
+
+    .card-img-wrap {
+      background: #f1f5f9;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    /* ROUNDED PRODUCT IMAGE */
+    .card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: var(--radius-md);
+      transition: transform 0.25s ease;
+    }
+
+    .product-card:hover .card-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .card-body {
+      padding: 11px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .card-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.25;
+      min-height: 2.2em;
+    }
+
+    .card-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px dashed var(--border-color);
+      padding-top: 8px;
+    }
+
+    .card-price {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .card-btn {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-align: center;
+      white-space: nowrap;
+      transition: background 0.15s ease;
+    }
+
+    .card-btn:active {
+      background: var(--primary-hover);
+    }
+
+    /* TRUST STATEMENT BOX */
+    .statement-box {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      margin: 16px 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .statement-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .statement-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .statement-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.83rem;
+      color: #334155;
+      line-height: 1.4;
+    }
+
+    .statement-item svg {
+      color: var(--status-success);
+      margin-top: 2px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #ffffff;
+      border-top: 1px solid var(--border-color);
+      padding: 24px 0 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 24px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 12px 0 16px;
+    }
+
+    .footer-link-btn {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    /* MOBILE BOTTOM NAVIGATION */
+    .mobile-bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 60px;
+      z-index: 50;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.04);
+    }
+
+    @media (min-width: 1024px) {
+      .mobile-bottom-nav {
+        display: none;
+      }
+    }
+
+    .bottom-nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      width: 25%;
+      height: 100%;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.2s ease;
+    }
+
+    .bottom-nav-item.active {
+      color: var(--primary);
+    }
+
+    .bottom-nav-item.active svg {
+      transform: scale(1.15) translateY(-2px);
+      stroke: var(--primary);
+    }
+
+    /* FULLSCREEN DEDICATED PAGES */
+    .fullscreen-page {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #f8fafc;
+      z-index: 100;
+      display: none;
+      flex-direction: column;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .fullscreen-page.active {
+      display: flex;
+      animation: slideInRight 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes slideInRight {
+      from { transform: translateX(100%); }
+      to { transform: translateX(0); }
+    }
+
+    .page-header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      padding: 0 16px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      flex-shrink: 0;
+    }
+
+    .page-header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-back {
+      background: var(--bg-body);
+      border: 1px solid var(--border-color);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-main);
+      cursor: pointer;
+    }
+
+    .page-header-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .page-content {
+      padding: 16px;
+      max-width: 520px;
+      margin: 0 auto;
+      width: 100%;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* ORDER SUMMARY */
+    .order-summary-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .order-summary-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: var(--radius-md);
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      padding: 4px;
+    }
+
+    .order-summary-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .order-summary-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .order-summary-price {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    /* ORDER FORM */
+    .form-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-label {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .form-label span {
+      color: #ef4444;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 11px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      font-size: 0.9rem;
+      font-family: inherit;
+      color: var(--text-main);
+      background: #ffffff;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12);
+    }
+
+    /* PAYMENT OPTION BUTTONS */
+    .payment-options-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .payment-option-btn {
+      background: #ffffff;
+      border: 2px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 10px 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .payment-option-btn.active {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .payment-option-btn img {
+      height: 32px;
+      object-fit: contain;
+    }
+
+    .payment-option-btn span {
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    /* NUMBER DISPLAY BOX */
+    .number-display-box {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 4px solid var(--primary);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+    }
+
+    .number-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 6px;
+      background: #ffffff;
+      border: 1px dashed var(--primary);
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+    }
+
+    .number-val {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: 0.5px;
+    }
+
+    .btn-copy-num {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .btn-copy-num:active {
+      background: var(--primary-hover);
+    }
+
+    .btn-submit-order {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.98rem;
+      font-weight: 700;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+
+    .btn-submit-order:active {
+      transform: scale(0.98);
+      background: var(--primary-hover);
+    }
+
+    .btn-submit-order:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+
+    /* HISTORY LIST: REAL-TIME STYLES */
+    .history-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: var(--shadow-sm);
+      border-left: 4px solid #cbd5e1;
+    }
+
+    .history-card.is-pending { border-left-color: #f59e0b; }
+    .history-card.is-completed { border-left-color: #10b981; }
+    .history-card.is-cancelled { border-left-color: #ef4444; }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: 99px;
+      font-size: 0.72rem;
+      font-weight: 800;
+    }
+
+    .status-Pending { background: var(--status-pending-bg); color: var(--status-pending); }
+    .status-Completed { background: var(--status-success-bg); color: var(--status-success); }
+    .status-Cancelled { background: var(--status-cancelled-bg); color: var(--status-cancelled); }
+
+    /* TOAST */
+    .toast-msg {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0f172a;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      z-index: 200;
+      box-shadow: var(--shadow-md);
+      display: none;
+      white-space: nowrap;
+    }
+  </style>
+
+  <!-- Firebase Compat Libraries -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+  <!-- Toast Notice -->
+  <div id="toast" class="toast-msg"></div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <div class="brand-wrap">
+          <img src="https://i.ibb.co.com/C5tCCKKX/FB-IMG-1791441144591.jpg" alt="Logo" class="brand-logo">
+          <div class="brand-text">
+            <span class="brand-title">BD Diamond Top Up</span>
+            <span class="brand-subtitle">Centre 009</span>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <button class="btn-header-history" onclick="openHistoryPage()">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="9"></circle></svg>
+            <span>হিস্ট্রি</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HOMEPAGE CONTENT -->
+  <main id="main-content">
+    <div class="container">
+
+      <!-- BANNER SLIDER: 1336 / 752 RATIO -->
+      <section class="banner-section">
+        <div class="slider-viewport" id="banner-viewport">
+          <div class="slider-track" id="slider-track">
+            <div class="slide-item">
+              <img src="https://i.ibb.co.com/VYsgYPPj/IMG-20261008-133504.png" alt="Free Fire Diamond Top Up Offer Banner">
+            </div>
+          </div>
+          <div class="slider-dots" id="slider-dots">
+            <span class="dot active"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUST BADGES BAR: FIXED NO BREAKAGE ON MOBILE -->
+      <div class="trust-badges-bar">
+        <div class="trust-badge-item">
+          <div class="trust-badge-icon-box">
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div class="trust-badge-text">ডেলিভারি সময়: <span>প্রায় ২ মিনিট</span></div>
+        </div>
+        <div class="trust-badge-item">
+          <div class="trust-badge-icon-box">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <div class="trust-badge-text">১০০% নিরাপদ <span>অফিশিয়াল টপ-আপ</span></div>
+        </div>
+        <div class="trust-badge-item">
+          <div class="trust-badge-icon-box">
+            <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+          </div>
+          <div class="trust-badge-text">পেমেন্ট মেথড: <span>bKash / Nagad</span></div>
+        </div>
+      </div>
+
+      <!-- FEATURED OFFERS SECTION -->
+      <section class="section-wrap" id="sec-featured">
+        <div class="section-head">
+          <h2 class="section-title">স্পেশাল মেম্বারশিপ অফার</h2>
+          <div class="section-subtitle">Weekly, Monthly & Special Pass Offers</div>
+        </div>
+        <div class="product-grid" id="grid-featured">
+          <div class="product-card" onclick="openOrderScreen('Weekly Membership', 140, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/5b19b3d1-2172-4cfe-944c-c4ec3742588b.png')">
+            <div class="card-img-wrap">
+              <img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/5b19b3d1-2172-4cfe-944c-c4ec3742588b.png" alt="Weekly Membership">
+            </div>
+            <div class="card-body">
+              <div class="card-title">Weekly Membership</div>
+              <div class="card-foot">
+                <span class="card-price">140 BDT</span>
+                <button class="card-btn" type="button">অর্ডার করুন</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" onclick="openOrderScreen('Monthly Membership', 650, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/5dd60fa9-83da-4380-ba78-36ef57cbb6f9.png')">
+            <div class="card-img-wrap">
+              <img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/5dd60fa9-83da-4380-ba78-36ef57cbb6f9.png" alt="Monthly Membership">
+            </div>
+            <div class="card-body">
+              <div class="card-title">Monthly Membership</div>
+              <div class="card-foot">
+                <span class="card-price">650 BDT</span>
+                <button class="card-btn" type="button">অর্ডার করুন</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" onclick="openOrderScreen('Weekly Lite', 60, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/6030e343-5d25-412f-b276-07100070b446.png')">
+            <div class="card-img-wrap">
+              <img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/6030e343-5d25-412f-b276-07100070b446.png" alt="Weekly Lite">
+            </div>
+            <div class="card-body">
+              <div class="card-title">Weekly Lite</div>
+              <div class="card-foot">
+                <span class="card-price">60 BDT</span>
+                <button class="card-btn" type="button">অর্ডার করুন</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" onclick="openOrderScreen('Level Up Pass', 300, 'https://www.digitalproductsbd.com/wp-content/uploads/Freefire-Level-Up-Pass.webp')">
+            <div class="card-img-wrap">
+              <img src="https://www.digitalproductsbd.com/wp-content/uploads/Freefire-Level-Up-Pass.webp" alt="Level Up Pass">
+            </div>
+            <div class="card-body">
+              <div class="card-title">Level Up Pass</div>
+              <div class="card-foot">
+                <span class="card-price">300 BDT</span>
+                <button class="card-btn" type="button">অর্ডার করুন</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DIAMOND PACKAGES SECTION -->
+      <section class="section-wrap" id="sec-diamonds">
+        <div class="section-head">
+          <h2 class="section-title">Free Fire Diamonds</h2>
+          <div class="section-subtitle">UID দিয়ে সরাসরি দ্রুততম ডায়মন্ড টপ-আপ</div>
+        </div>
+        <div class="product-grid" id="grid-diamonds">
+          <div class="product-card" onclick="openOrderScreen('820 Diamonds', 300, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg')">
+            <div class="card-img-wrap"><img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg" alt="820 Diamonds"></div>
+            <div class="card-body"><div class="card-title">820 Diamonds</div><div class="card-foot"><span class="card-price">300 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
+          </div>
+          <div class="product-card" onclick="openOrderScreen('2000 Diamonds', 500, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg')">
+            <div class="card-img-wrap"><img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg" alt="2000 Diamonds"></div>
+            <div class="card-body"><div class="card-title">2000 Diamonds</div><div class="card-foot"><span class="card-price">500 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
+          </div>
+          <div class="product-card" onclick="openOrderScreen('3500 Diamonds', 700, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg')">
+            <div class="card-img-wrap"><img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg" alt="3500 Diamonds"></div>
+            <div class="card-body"><div class="card-title">3500 Diamonds</div><div class="card-foot"><span class="card-price">700 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
+          </div>
+          <div class="product-card" onclick="openOrderScreen('5500 Diamonds', 1100, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg')">
+            <div class="card-img-wrap"><img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg" alt="5500 Diamonds"></div>
+            <div class="card-body"><div class="card-title">5500 Diamonds</div><div class="card-foot"><span class="card-price">1100 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
+          </div>
+          <div class="product-card" onclick="openOrderScreen('8800 Diamonds', 1500, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg')">
+            <div class="card-img-wrap"><img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg" alt="8800 Diamonds"></div>
+            <div class="card-body"><div class="card-title">8800 Diamonds</div><div class="card-foot"><span class="card-price">1500 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
+          </div>
+          <div class="product-card" onclick="openOrderScreen('14000 Diamonds', 2000, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg')">
+            <div class="card-img-wrap"><img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg" alt="14000 Diamonds"></div>
+            <div class="card-body"><div class="card-title">14000 Diamonds</div><div class="card-foot"><span class="card-price">2000 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
+          </div>
+          <div class="product-card" onclick="openOrderScreen('20000 Diamonds', 2500, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg')">
+            <div class="card-img-wrap"><img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg" alt="20000 Diamonds"></div>
+            <div class="card-body"><div class="card-title">20000 Diamonds</div><div class="card-foot"><span class="card-price">2500 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
+          </div>
+          <div class="product-card" onclick="openOrderScreen('25000 Diamonds', 3000, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg')">
+            <div class="card-img-wrap"><img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg" alt="25000 Diamonds"></div>
+            <div class="card-body"><div class="card-title">25000 Diamonds</div><div class="card-foot"><span class="card-price">3000 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
+          </div>
+          <div class="product-card" onclick="openOrderScreen('35000 Diamonds', 3900, 'https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg')">
+            <div class="card-img-wrap"><img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/7b902fd0-09f3-4408-b2b0-390786e5f833.jpg" alt="35000 Diamonds"></div>
+            <div class="card-body"><div class="card-title">35000 Diamonds</div><div class="card-foot"><span class="card-price">3900 BDT</span><button class="card-btn" type="button">অর্ডার করুন</button></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUST & INSTRUCTIONS -->
+      <div class="statement-box">
+        <h3 class="statement-title">
+          <svg class="icon" style="color:var(--primary);" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          আমাদের প্রতিশ্রুতি ও নিয়মাবলী
+        </h3>
+        <ul class="statement-list">
+          <li class="statement-item">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>আমরা প্রমাণসহকারে সততার সাথে টপআপ দিয়ে থাকি।</span>
+          </li>
+          <li class="statement-item">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>পেমেন্ট করার পর ইনশাআল্লাহ অবশ্যই দ্রুততম সময়ে টপআপ পাবেন।</span>
+          </li>
+          <li class="statement-item">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>সকল টপ-আপের জন্য অবশ্যই সঠিক Player UID Code দিতে হবে।</span>
+          </li>
+          <li class="statement-item">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>ডেলিভারি টাইম: প্রায় ২ মিনিট। শতভাগ বিশ্বাসের সাথে টপ-আপ নিন।</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div style="font-weight:700; color:var(--text-main);">BD Diamond Top Up Centre 009</div>
+        <p style="margin-top:4px;">বাংলাদেশের সবচেয়ে দ্রুত ও বিশ্বস্ত ফ্রি ফায়ার ডায়মন্ড টপ-আপ সেবা।</p>
+        
+        <div class="footer-links">
+          <span class="footer-link-btn" onclick="openPolicyPage('terms')">শর্তাবলী (Terms)</span>
+          <span class="footer-link-btn" onclick="openPolicyPage('refund')">রিফান্ড পলিসি</span>
+          <span class="footer-link-btn" onclick="openPolicyPage('privacy')">প্রাইভেসি পলিসি</span>
+          <a href="https://www.facebook.com/share/1E8nGKjwgs/" target="_blank" class="footer-link-btn">Facebook Page</a>
+        </div>
+
+        <div>&copy; 2026 BD Diamond Top Up Centre 009. All rights reserved.</div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- MOBILE BOTTOM NAVIGATION -->
+  <nav class="mobile-bottom-nav">
+    <div class="bottom-nav-item active" id="btn-nav-home" onclick="navSwitch('home')">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span>হোম</span>
+    </div>
+    <div class="bottom-nav-item" id="btn-nav-topup" onclick="navSwitch('topup')">
+      <svg class="icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+      <span>টপ-আপ</span>
+    </div>
+    <div class="bottom-nav-item" id="btn-nav-history" onclick="navSwitch('history')">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="9"></circle></svg>
+      <span>হিস্ট্রি</span>
+    </div>
+    <div class="bottom-nav-item" id="btn-nav-support" onclick="navSwitch('support')">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+      <span>সাপোর্ট</span>
+    </div>
+  </nav>
+
+  <!-- FULLSCREEN VIEW: ORDER SCREEN -->
+  <div class="fullscreen-page" id="order-page">
+    <div class="page-header">
+      <div class="page-header-left">
+        <button class="btn-back" onclick="closeOrderScreen()">
+          <svg class="icon" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        </button>
+        <div class="page-header-title">অর্ডার সম্পন্ন করুন</div>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <div class="order-summary-card">
+        <img id="od-img" src="" alt="Package Image">
+        <div class="order-summary-info">
+          <div class="order-summary-name" id="od-name">820 Diamonds</div>
+          <div class="order-summary-price" id="od-price">300 BDT</div>
+          <div style="font-size:0.75rem; color:var(--text-muted);">ডেলিভারি: প্রায় ২ মিনিট</div>
+        </div>
+      </div>
+
+      <form class="form-card" onsubmit="submitCustomerOrder(event)">
+        <div class="form-group">
+          <label class="form-label">Free Fire Player UID <span>*</span></label>
+          <input type="text" class="form-control" id="form-uid" placeholder="গেমের সঠিক UID দিন (যেমন: 184920491)" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">পেমেন্ট মেথড সিলেক্ট করুন <span>*</span></label>
+          <div class="payment-options-grid" id="payment-grid-buttons">
+            <div class="payment-option-btn active" id="pay-opt-bkash" onclick="setPaymentMethod('bkash')">
+              <img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/cfd4da92-da3f-4f1a-b3dd-bcb09a3ba09a.png" alt="bKash">
+              <span>bKash Personal</span>
+            </div>
+            <div class="payment-option-btn" id="pay-opt-nagad" onclick="setPaymentMethod('nagad')">
+              <img src="https://i.supaimg.com/88cac59e-85c9-44fa-970b-faf486de12c5/490b9996-1806-46f4-bfb7-5267c250269e.png" alt="Nagad">
+              <span>Nagad Personal</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="number-display-box">
+          <div style="font-size:0.8rem; font-weight:700; color:#334155;">নিচের নাম্বারে Send Money করুন:</div>
+          <div class="number-row">
+            <span class="number-val" id="active-payment-number">01880738861</span>
+            <button type="button" class="btn-copy-num" onclick="copyActiveNumber()">কপি করুন</button>
+          </div>
+          <div style="font-size:0.75rem; color:#64748b; margin-top:6px;">
+            টাকা পাঠানোর পর প্রেরকের নম্বর এবং Transaction ID নিচে দিন।
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">যে নাম্বার থেকে টাকা পাঠিয়েছেন (Sender) <span>*</span></label>
+          <input type="tel" class="form-control" id="form-sender" placeholder="01XXXXXXXXX" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Transaction ID (TrxID) <span>*</span></label>
+          <input type="text" class="form-control" id="form-trx" placeholder="যেমন: BL948KDJ81" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">আপনার যোগাযোগ নম্বর (WhatsApp) <span>*</span></label>
+          <input type="tel" class="form-control" id="form-contact" placeholder="01XXXXXXXXX" required>
+        </div>
+
+        <button type="submit" class="btn-submit-order" id="btn-submit-action">
+          অর্ডার কনফার্ম করুন
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FULLSCREEN VIEW: ORDER HISTORY (NOW WITH 100% REALTIME SYNC) -->
+  <div class="fullscreen-page" id="history-page">
+    <div class="page-header">
+      <div class="page-header-left">
+        <button class="btn-back" onclick="closeHistoryPage()">
+          <svg class="icon" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        </button>
+        <div class="page-header-title">পূর্ববর্তী অর্ডার হিস্ট্রি</div>
+      </div>
+      <button style="background:var(--primary-soft); color:var(--primary); font-size:0.75rem; font-weight:700; padding:6px 10px; border-radius:6px; border:1px solid rgba(29,78,216,0.15);" onclick="syncRealtimeHistory()">🔄 রিফ্রেশ</button>
+    </div>
+    <div class="page-content" id="history-content-list">
+      <!-- Live Orders List Loaded via JS -->
+    </div>
+  </div>
+
+  <!-- FULLSCREEN VIEW: POLICY -->
+  <div class="fullscreen-page" id="policy-page">
+    <div class="page-header">
+      <div class="page-header-left">
+        <button class="btn-back" onclick="closePolicyPage()">
+          <svg class="icon" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        </button>
+        <div class="page-header-title" id="policy-header-title">শর্তাবলী ও পলিসি</div>
+      </div>
+    </div>
+    <div class="page-content" style="background:#ffffff; padding:20px; border-radius:var(--radius-lg); border:1px solid var(--border-color); line-height:1.7;" id="policy-body-content">
+      <!-- Policy text -->
+    </div>
+  </div>
+
+  <!-- FIREBASE & SCRIPT LOGIC -->
+  <script>
+    // 1. Firebase Config
+    const firebaseConfig = {
+      apiKey: "AIzaSyDav4lwSEaploRqVRXlfyNUi1MD63kctmY",
+      authDomain: "bd-diamond-top-up-centre-009.firebaseapp.com",
+      projectId: "bd-diamond-top-up-centre-009",
+      storageBucket: "bd-diamond-top-up-centre-009.firebasestorage.app",
+      messagingSenderId: "627249942402",
+      appId: "1:627249942402:web:ffafb33715a6035b3e499b"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+    // 2. Default App State
+    const DEFAULT_SETTINGS = {
+      bkashNumber: "01880738861",
+      nagadNumber: "",
+      whatsapp: "01980434250",
+      banners: ["https://i.ibb.co.com/VYsgYPPj/IMG-20261008-133504.png"]
+    };
+
+    let appSettings = JSON.parse(localStorage.getItem('bd009_settings')) || DEFAULT_SETTINGS;
+    let selectedOrder = null;
+    let selectedPayment = "bkash";
+    let historyListenerUnsubscribe = null;
+
+    // Toast
+    function showToast(text) {
+      const t = document.getElementById('toast');
+      t.innerText = text;
+      t.style.display = 'block';
+      setTimeout(() => { t.style.display = 'none'; }, 3000);
+    }
+
+    // 3. COPY CLIPBOARD
+    function copyActiveNumber() {
+      const num = document.getElementById('active-payment-number').innerText.trim();
+      if (!num) return;
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(num).then(() => {
+          showToast("নাম্বার কপি হয়েছে: " + num);
+        }).catch(() => fallbackCopy(num));
+      } else {
+        fallbackCopy(num);
+      }
+    }
+
+    function fallbackCopy(text) {
+      const tempInput = document.createElement("input");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      tempInput.setSelectionRange(0, 99999);
+      try {
+        document.execCommand("copy");
+        showToast("নাম্বার কপি হয়েছে: " + text);
+      } catch (e) {
+        showToast("নম্বরটি দেখে লিখুন: " + text);
+      }
+      document.body.removeChild(tempInput);
+    }
+
+    // 4. BANNER SLIDER (1336:752 AUTO-LOOP & TOUCH SWIPE)
+    let currentSlide = 0;
+    let sliderInterval = null;
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    function initBannerSlider() {
+      const track = document.getElementById('slider-track');
+      const dotsContainer = document.getElementById('slider-dots');
+      const banners = appSettings.banners && appSettings.banners.length ? appSettings.banners : DEFAULT_SETTINGS.banners;
+
+      track.innerHTML = '';
+      dotsContainer.innerHTML = '';
+
+      banners.forEach((url, i) => {
+        const slide = document.createElement('div');
+        slide.className = 'slide-item';
+        slide.innerHTML = `<img src="${url}" alt="Offer Banner ${i+1}">`;
+        track.appendChild(slide);
+
+        const dot = document.createElement('span');
+        dot.className = `dot ${i === 0 ? 'active' : ''}`;
+        dot.onclick = () => goToSlide(i);
+        dotsContainer.appendChild(dot);
+      });
+
+      if (sliderInterval) clearInterval(sliderInterval);
+
+      if (banners.length > 1) {
+        sliderInterval = setInterval(() => {
+          currentSlide = (currentSlide + 1) % banners.length;
+          goToSlide(currentSlide);
+        }, 8000);
+      }
+
+      const viewport = document.getElementById('banner-viewport');
+      viewport.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      viewport.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipeGesture();
+      }, { passive: true });
+    }
+
+    function handleSwipeGesture() {
+      const banners = appSettings.banners || DEFAULT_SETTINGS.banners;
+      if (banners.length <= 1) return;
+
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) {
+          currentSlide = (currentSlide + 1) % banners.length;
+        } else {
+          currentSlide = (currentSlide - 1 + banners.length) % banners.length;
+        }
+        goToSlide(currentSlide);
+      }
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      const track = document.getElementById('slider-track');
+      track.style.transform = `translateX(-${index * 100}%)`;
+
+      const dots = document.querySelectorAll('#slider-dots .dot');
+      dots.forEach((d, i) => {
+        d.classList.toggle('active', i === index);
+      });
+    }
+
+    // 5. ORDER SCREEN CONTROLLER
+    function openOrderScreen(title, price, image) {
+      selectedOrder = { title, price, image };
+      document.getElementById('od-name').innerText = title;
+      document.getElementById('od-price').innerText = price + " BDT";
+      document.getElementById('od-img').src = image;
+
+      setPaymentMethod('bkash');
+      const nagadBtn = document.getElementById('pay-opt-nagad');
+      if (!appSettings.nagadNumber || appSettings.nagadNumber.trim() === '') {
+        nagadBtn.style.display = 'none';
+      } else {
+        nagadBtn.style.display = 'flex';
+      }
+
+      document.getElementById('order-page').classList.add('active');
+      window.scrollTo(0, 0);
+    }
+
+    function closeOrderScreen() {
+      document.getElementById('order-page').classList.remove('active');
+    }
+
+    function setPaymentMethod(method) {
+      selectedPayment = method;
+      document.getElementById('pay-opt-bkash').classList.toggle('active', method === 'bkash');
+      document.getElementById('pay-opt-nagad').classList.toggle('active', method === 'nagad');
+
+      const numEl = document.getElementById('active-payment-number');
+      if (method === 'bkash') {
+        numEl.innerText = appSettings.bkashNumber || "01880738861";
+      } else {
+        numEl.innerText = appSettings.nagadNumber || "01880738861";
+      }
+    }
+
+    // Submit Order & Link with Local Storage
+    async function submitCustomerOrder(e) {
+      e.preventDefault();
+      const btn = document.getElementById('btn-submit-action');
+      btn.disabled = true;
+      btn.innerText = "অর্ডার প্রসেস হচ্ছে...";
+
+      const uid = document.getElementById('form-uid').value.trim();
+      const sender = document.getElementById('form-sender').value.trim();
+      const trx = document.getElementById('form-trx').value.trim();
+      const contact = document.getElementById('form-contact').value.trim();
+
+      const dateStr = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+      const randomNum = Math.floor(100 + Math.random() * 900);
+      const orderId = `BD009-${dateStr}-${randomNum}`;
+
+      const orderData = {
+        orderId: orderId,
+        productName: selectedOrder.title,
+        productPrice: selectedOrder.price,
+        uid: uid,
+        paymentMethod: selectedPayment,
+        senderNumber: sender,
+        transactionId: trx,
+        customerContact: contact,
+        status: "Pending",
+        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+        localDate: new Date().toLocaleDateString('bn-BD')
+      };
+
+      try {
+        await db.collection('orders').add(orderData);
+        saveOrderToLocalHistory(orderData);
+        showToast("অর্ডার সফলভাবে জমা হয়েছে!");
+        closeOrderScreen();
+        openHistoryPage();
+      } catch (err) {
+        console.warn("Firestore sync fallback:", err);
+        saveOrderToLocalHistory(orderData);
+        showToast("অর্ডার গ্রহণ করা হয়েছে!");
+        closeOrderScreen();
+        openHistoryPage();
+      } finally {
+        btn.disabled = false;
+        btn.innerText = "অর্ডার কনফার্ম করুন";
+      }
+    }
+
+    function saveOrderToLocalHistory(order) {
+      let history = JSON.parse(localStorage.getItem('bd009_history')) || [];
+      // Prevent duplicates
+      history = history.filter(o => o.orderId !== order.orderId);
+      history.unshift({
+        orderId: order.orderId,
+        productName: order.productName,
+        productPrice: order.productPrice,
+        uid: order.uid,
+        transactionId: order.transactionId,
+        status: order.status || 'Pending',
+        localDate: order.localDate || new Date().toLocaleDateString('bn-BD')
+      });
+      localStorage.setItem('bd009_history', JSON.stringify(history));
+    }
+
+    // 6. ORDER HISTORY: 100% REALTIME FIRESTORE SYNC FIX
+    function syncRealtimeHistory() {
+      const history = JSON.parse(localStorage.getItem('bd009_history')) || [];
+      if (history.length === 0) {
+        renderHistoryUI(history);
+        return;
+      }
+
+      // Collect the latest Order IDs for this client
+      const orderIds = history.slice(0, 10).map(o => o.orderId);
+
+      // Realtime listener for client orders from Firestore
+      if (historyListenerUnsubscribe) {
+        historyListenerUnsubscribe();
+      }
+
+      try {
+        historyListenerUnsubscribe = db.collection('orders')
+          .where('orderId', 'in', orderIds)
+          .onSnapshot(snapshot => {
+            snapshot.forEach(doc => {
+              const liveData = doc.data();
+              const item = history.find(o => o.orderId === liveData.orderId);
+              if (item && liveData.status) {
+                // Live status update from Admin!
+                item.status = liveData.status;
+              }
+            });
+            // Update storage with live status
+            localStorage.setItem('bd009_history', JSON.stringify(history));
+            renderHistoryUI(history);
+          }, err => {
+            renderHistoryUI(history);
+          });
+      } catch (err) {
+        renderHistoryUI(history);
+      }
+    }
+
+    function renderHistoryUI(historyData) {
+      const container = document.getElementById('history-content-list');
+      const history = historyData || JSON.parse(localStorage.getItem('bd009_history')) || [];
+
+      if (history.length === 0) {
+        container.innerHTML = `
+          <div style="text-align:center; padding:50px 20px; color:var(--text-muted);">
+            <svg class="icon" style="width:48px; height:48px; stroke-width:1.5; margin-bottom:10px; color:#cbd5e1;" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <div style="font-weight:700; font-size:1rem; color:var(--text-main);">কোনো অর্ডার রেকর্ড নেই</div>
+            <p style="font-size:0.8rem; margin-top:4px;">আপনার দেওয়া পূর্ববর্তী সকল অর্ডার এখানে লাইভ দেখা যাবে।</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = '';
+      history.forEach(item => {
+        const card = document.createElement('div');
+        const st = item.status || 'Pending';
+        card.className = `history-card is-${st.toLowerCase()}`;
+
+        let statusText = 'পেন্ডিং (অপেক্ষমাণ)';
+        if (st === 'Completed') statusText = 'ডেলিভারি সম্পন্ন ✓';
+        if (st === 'Cancelled') statusText = 'অর্ডার বাতিল ✕';
+
+        card.innerHTML = `
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <strong style="color:var(--primary); font-size:0.95rem;">${item.orderId}</strong>
+            <span class="status-badge status-${st}">${statusText}</span>
+          </div>
+          <div style="font-size:0.88rem; font-weight:700; color:var(--text-main);">${item.productName} — ${item.productPrice} BDT</div>
+          <div style="font-size:0.78rem; color:var(--text-muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:4px;">
+            <span>UID: <strong>${item.uid}</strong></span>
+            <span>Trx: <strong>${item.transactionId}</strong></span>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function openHistoryPage() {
+      document.getElementById('history-page').classList.add('active');
+      window.scrollTo(0, 0);
+      syncRealtimeHistory();
+    }
+
+    function closeHistoryPage() {
+      document.getElementById('history-page').classList.remove('active');
+    }
+
+    // 7. POLICIES
+    function openPolicyPage(type) {
+      const headerTitle = document.getElementById('policy-header-title');
+      const body = document.getElementById('policy-body-content');
+
+      if (type === 'terms') {
+        headerTitle.innerText = "শর্তাবলী (Terms & Conditions)";
+        body.innerHTML = `
+          <h4>১. সঠিক UID নিশ্চিতকরণ</h4>
+          <p>টপ-আপ দেওয়ার পূর্বে অবশ্যই আপনার গেমের প্লেয়ার UID কোড নির্ভুলভাবে দিতে হবে। ভুল UID দিলে ডায়মন্ড অন্য আইডিতে চলে যেতে পারে, যার দায়ভার ওয়েবসাইট কর্তৃপক্ষের নয়।</p>
+          <br>
+          <h4>২. পেমেন্ট ভেরিফিকেশন</h4>
+          <p>বিকাশ বা নগদ নম্বর থেকে টাকা পাঠানোর পর সঠিক Transaction ID প্রদান করতে হবে।</p>
+          <br>
+          <h4>৩. ডেলিভারি সময়</h4>
+          <p>স্বাভাবিক সময়ে প্রায় ২ মিনিটের মধ্যে ডেলিভারি সম্পন্ন হয়। তবে গ্যারিনা সার্ভার সমস্যা থাকলে সর্বোচ্চ ১০-১৫ মিনিট সময় লাগতে পারে।</p>
+        `;
+      } else if (type === 'refund') {
+        headerTitle.innerText = "রিফান্ড নীতিমালা (Refund Policy)";
+        body.innerHTML = `
+          <h4>রিফান্ড সুবিধা</h4>
+          <p>যদি আপনার টাকা কেটে নেওয়া হয় এবং কোনো যান্ত্রিক কারণে ৩০ মিনিটের মধ্যেও টপ-আপ প্রদান সম্ভব না হয়, তবে উপযুক্ত প্রমাণ সাপেক্ষে ১০০% টাকা ক্যাশ রিফান্ড প্রদান করা হবে।</p>
+          <br>
+          <p>ভুল UID দিলে কোনো প্রকার রিফান্ড প্রযোজ্য হবে না। যেকোনো প্রয়োজনে সরাসরি আমাদের হোয়াটসঅ্যাপে মেসেজ দিন।</p>
+        `;
+      } else {
+        headerTitle.innerText = "প্রাইভেসি পলিসি (Privacy Policy)";
+        body.innerHTML = `
+          <h4>ব্যক্তিগত তথ্যের সুরক্ষা</h4>
+          <p>গ্রাহকের কোনো পাসওয়ার্ড বা আইডির সিক্রেট তথ্য আমরা সংগ্রহ করি না। শুধুমাত্র টপ-আপ পৌঁছে দিতে UID এবং ভেরিফিকেশনের জন্য মোবাইল নম্বর ও TrxID প্রয়োজন হয়।</p>
+        `;
+      }
+
+      document.getElementById('policy-page').classList.add('active');
+      window.scrollTo(0, 0);
+    }
+
+    function closePolicyPage() {
+      document.getElementById('policy-page').classList.remove('active');
+    }
+
+    // 8. BOTTOM NAVIGATION
+    function navSwitch(type) {
+      document.querySelectorAll('.bottom-nav-item').forEach(b => b.classList.remove('active'));
+
+      if (type === 'home') {
+        document.getElementById('btn-nav-home').classList.add('active');
+        closeOrderScreen();
+        closeHistoryPage();
+        closePolicyPage();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (type === 'topup') {
+        document.getElementById('btn-nav-topup').classList.add('active');
+        closeOrderScreen();
+        closeHistoryPage();
+        closePolicyPage();
+        document.getElementById('sec-diamonds').scrollIntoView({ behavior: 'smooth' });
+      } else if (type === 'history') {
+        document.getElementById('btn-nav-history').classList.add('active');
+        openHistoryPage();
+      } else if (type === 'support') {
+        document.getElementById('btn-nav-support').classList.add('active');
+        const waNum = (appSettings.whatsapp || "01980434250").replace(/[^0-9]/g, '');
+        window.open(`https://wa.me/88${waNum}`, '_blank');
+      }
+    }
+
+    // 9. BACKGROUND FIRESTORE SETTINGS SYNC
+    async function syncFirestoreSettings() {
+      try {
+        const doc = await db.collection('settings').doc('general').get();
+        if (doc.exists) {
+          const remote = doc.data();
+          appSettings = { ...appSettings, ...remote };
+          localStorage.setItem('bd009_settings', JSON.stringify(appSettings));
+          setPaymentMethod(selectedPayment);
+          if (remote.banners && remote.banners.length) {
+            initBannerSlider();
+          }
+        }
+      } catch (err) {
+        console.log("Using cached settings.");
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initBannerSlider();
+      syncFirestoreSettings();
+      // Auto sync previous orders status on load
+      syncRealtimeHistory();
+    });
+  </script>
+</body>
+</html>
